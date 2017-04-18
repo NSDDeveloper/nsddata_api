@@ -1,0 +1,2711 @@
+{
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/Company"
+  },
+  "definitions": {
+    "Company": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "id",
+          "description": "id организации",
+          "type": "integer"
+        },
+        "code_nsd": {
+          "title": "Код НРД",
+          "description": "Код НРД",
+          "type": "string"
+        },
+        "name_full": {
+          "title": "Полное наименование",
+          "description": "Полное наименование",
+          "type": "string"
+        },
+        "name_full_en": {
+          "title": "Полное наименование на английском языке",
+          "description": "Полное наименование на английском языке",
+          "type": "string"
+        },
+        "name_short": {
+          "title": "Краткое наименование",
+          "description": "Краткое наименование",
+          "type": "string"
+        },
+        "name_short_en": {
+          "title": "Краткое наименование на английском языке",
+          "description": "Краткое наименование на английском языке",
+          "type": "string"
+        },
+        "name_full_tr": {
+          "title": "Полное транслитерированное наименование",
+          "description": "Полное транслитерированное наименование",
+          "type": "string"
+        },
+        "name_short_tr": {
+          "title": "Краткое транслитерированное наименование",
+          "description": "Краткое транслитерированное наименование",
+          "type": "string"
+        },
+        "name_short_hde": {
+          "title": "Краткое наименование в ПО ЛУЧ",
+          "description": "Краткое наименование в ПО ЛУЧ",
+          "type": "string"
+        },
+        "inn": {
+          "title": "ИНН",
+          "description": "ИНН",
+          "type": "string"
+        },
+        "company_type": {
+          "title": "Организационно-правовая форма",
+          "description": "Организационно-правовая форма",
+          "$ref": "#/definitions/CompanyType"
+        },
+        "cmp_code_fcsm": {
+          "title": "Уникальный код эмитента, присвоенный регистрирующим органом",
+          "description": "Уникальный код эмитента, присвоенный регистрирующим органом",
+          "type": "string"
+        },
+        "kpp": {
+          "title": "КПП",
+          "description": "КПП",
+          "type": "string"
+        },
+        "credit_cmp": {
+          "title": "Кредитная организация",
+          "description": "Признак кредитной организации (для российских организаций)",
+          "type": "boolean"
+        },
+        "is_bank_4_non_resident": {
+          "title": "Банк",
+          "description": "Признак Банк / не банк (для иностранных организаций)",
+          "type": "boolean"
+        },
+        "okpo": {
+          "title": "ОКПО",
+          "description": "ОКПО",
+          "type": "string"
+        },
+        "bik": {
+          "title": "БИК",
+          "description": "БИК",
+          "type": "string"
+        },
+        "state_reg_num": {
+          "title": "Регистрационный номер",
+          "description": "Номер гоcударственной регистрации при создании",
+          "type": "string"
+        },
+        "state_reg_date": {
+          "title": "Дата гос. регистрации",
+          "description": "Дата государственной регистрации при создании",
+          "type": "string"
+        },
+        "state_reg_authority": {
+          "title": "Регистрирующий орган",
+          "description": "Регистрирующий орган",
+          "$ref": "#/definitions/CompanyShort"
+        },
+        "ogrn": {
+          "title": "ОГРН",
+          "description": "ОГРН",
+          "type": "string"
+        },
+        "egrul_date": {
+          "title": "Дата внесения записи в ЕГРЮЛ",
+          "description": "Дата внесения записи в ЕГРЮЛ",
+          "type": "string"
+        },
+        "egrul_authority": {
+          "title": "Налоговый орган",
+          "description": "Налоговый орган",
+          "$ref": "#/definitions/CompanyShort"
+        },
+        "country": {
+          "title": "Страна местонахождения",
+          "description": "Страна местонахождения",
+          "$ref": "#/definitions/Country"
+        },
+        "market": {
+          "title": "Сектор рынка",
+          "description": "Сектор рынка",
+          "$ref": "#/definitions/Market"
+        },
+        "auth_capital": {
+          "title": "Уставный капитал",
+          "description": "Уставный капитал",
+          "type": "number"
+        },
+        "fio_head": {
+          "title": "Первое лицо",
+          "description": "Фамилия Имя Отчество (полностью) первого лица организации",
+          "type": "string"
+        },
+        "position_head": {
+          "title": "Должность первого лица",
+          "description": "Должность первого лица",
+          "type": "string"
+        },
+        "address": {
+          "title": "Адрес местонахождения",
+          "description": "Адрес местонахождения",
+          "type": "string"
+        },
+        "address_en": {
+          "title": "Адрес местонахождения на английском языке",
+          "description": "Адрес местонахождения на английском языке",
+          "type": "string"
+        },
+        "post_address": {
+          "title": "Адрес почтовый",
+          "description": "Адрес почтовый",
+          "type": "string"
+        },
+        "phone": {
+          "title": "Телефон",
+          "description": "Телефон",
+          "type": "string"
+        },
+        "fax": {
+          "title": "Факс",
+          "description": "Факс",
+          "type": "string"
+        },
+        "e_mail": {
+          "title": "E-mail",
+          "description": "Адрес электронной почты",
+          "type": "string"
+        },
+        "www": {
+          "title": "Веб-сайт организации",
+          "description": "Веб-сайт организации",
+          "type": "string"
+        },
+        "lei_code": {
+          "title": "LEI код",
+          "description": "LEI код",
+          "type": "string"
+        },
+        "lei_assignment_date": {
+          "title": "Дата присвоения кода LEI",
+          "description": "Дата присвоения кода LEI",
+          "type": "string"
+        },
+        "lei_verification_date": {
+          "title": "Дата последней верификации кода LEI",
+          "description": "Дата последней верификации кода LEI",
+          "type": "string"
+        },
+        "okved": {
+          "title": "ОКВЭД",
+          "description": "ОКВЭД",
+          "type": "string"
+        },
+        "tin": {
+          "title": "TIN",
+          "description": "TIN",
+          "type": "string"
+        },
+        "tax_number": {
+          "title": "Номер налоговой регистрации",
+          "description": "Номер налоговой регистрации",
+          "type": "string"
+        },
+        "licences": {
+          "title": "Лицензии",
+          "description": "Лицензии",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Licence"
+          }
+        },
+        "is_resident": {
+          "title": "Резидент",
+          "description": "Резидент",
+          "type": "boolean"
+        },
+        "securities": {
+          "title": "Ценные бумаги",
+          "description": "Ценные бумаги",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Security"
+          }
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "CompanyType": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Id организационно-правовой формы",
+          "description": "Идентификатор организационно-правовой формы",
+          "type": "integer"
+        },
+        "name_short": {
+          "title": "Краткое наименование организационно-правовой формы",
+          "description": "Краткое наименование организационно-правовой формы",
+          "type": "string"
+        },
+        "name_full": {
+          "title": "Полное наименование организационно-правовой формы",
+          "description": "Полное наименование организационно-правовой формы",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name_short",
+        "name_full"
+      ]
+    },
+    "CompanyShort": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "id",
+          "description": "id организации",
+          "type": "integer"
+        },
+        "code_nsd": {
+          "title": "Код НРД",
+          "description": "Код НРД",
+          "type": "string"
+        },
+        "name_full": {
+          "title": "Полное наименование",
+          "description": "Полное наименование",
+          "type": "string"
+        },
+        "name_full_en": {
+          "title": "Полное наименование на английском языке",
+          "description": "Полное наименование на английском языке",
+          "type": "string"
+        },
+        "name_short": {
+          "title": "Краткое наименование",
+          "description": "Краткое наименование",
+          "type": "string"
+        },
+        "name_short_en": {
+          "title": "Краткое наименование на английском языке",
+          "description": "Краткое наименование на английском языке",
+          "type": "string"
+        },
+        "name_full_tr": {
+          "title": "Полное транслитерированное наименование",
+          "description": "Полное транслитерированное наименование",
+          "type": "string"
+        },
+        "name_short_tr": {
+          "title": "Краткое транслитерированное наименование",
+          "description": "Краткое транслитерированное наименование",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "Country": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Id страны",
+          "description": "Идентификатор страны",
+          "type": "integer"
+        },
+        "code": {
+          "title": "Код страны (Двухбуквенный)",
+          "description": "Код страны (Двухбуквенный)",
+          "type": "string"
+        },
+        "code3": {
+          "title": "Код страны (Трехбуквенный)",
+          "description": "Код страны (Трехбуквенный)",
+          "type": "string"
+        },
+        "code_digital": {
+          "title": "Код страны (Цифровой)",
+          "description": "Код страны (Цифровой)",
+          "type": "integer"
+        },
+        "name": {
+          "title": "Наименование страны",
+          "description": "Наименование страны",
+          "type": "string"
+        },
+        "name_en": {
+          "title": "Наименование страны на английском языке",
+          "description": "Наименование страны на английском языке",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "code",
+        "name",
+        "name_en"
+      ]
+    },
+    "Market": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Id сектора рынка",
+          "description": "Идентификатор сектора рынка",
+          "type": "integer"
+        },
+        "name": {
+          "title": "Наименование сектора рынка",
+          "description": "Наименование",
+          "type": "string"
+        },
+        "name_en": {
+          "title": "Наименование сектора рынка на английском языке",
+          "description": "Наименование сектора рынка на английском языке",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "name_en"
+      ]
+    },
+    "Licence": {
+      "type": "object",
+      "properties": {
+        "type_code": {
+          "title": "Дата выдачи по виду деятельности",
+          "description": "Дата выдачи по виду деятельности",
+          "type": "string"
+        },
+        "type": {
+          "title": "Тип лицензии",
+          "description": "Тип лицензии",
+          "type": "string"
+        },
+        "activity": {
+          "title": "Вид деятельности",
+          "description": "Вид деятельности, на которую выдана лицензия ",
+          "type": "string"
+        },
+        "num": {
+          "title": "Номер лицензии",
+          "description": "Номер лицензии",
+          "type": "string"
+        },
+        "date": {
+          "title": "Дата выдачи по виду деятельности",
+          "description": "Дата выдачи по виду деятельности",
+          "type": "string"
+        },
+        "authority": {
+          "title": "Орган, выдавший лицензию",
+          "description": "Орган, выдавший лицензию",
+          "$ref": "#/definitions/CompanyShort"
+        }
+      }
+    },
+    "Security": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "id",
+          "description": "Идентификатор ценной бумаги",
+          "type": "integer"
+        },
+        "isin": {
+          "title": "ISIN",
+          "description": "ISIN код",
+          "type": "string"
+        },
+        "code_nsd": {
+          "title": "Код НРД",
+          "description": "Код НРД",
+          "type": "string"
+        },
+        "name_full": {
+          "title": "Полное наименование",
+          "description": "Полное наименование ценной бумаги",
+          "type": "string"
+        },
+        "name_full_en": {
+          "title": "Полное наименование на английском языке",
+          "description": "Полное наименование на английском языке",
+          "type": "string"
+        },
+        "instr_type": {
+          "title": "Тип ФИ",
+          "description": "Тип финансового инструмента",
+          "$ref": "#/definitions/InstrType"
+        },
+        "state_reg_number": {
+          "title": "Номер гос. регистрации/Идентификационный номер",
+          "description": "Номер гос. регистрации/Идентификационный номер",
+          "type": "string"
+        },
+        "isin_date": {
+          "title": "Дата присвоения ISIN",
+          "description": "Дата присвоения ISIN",
+          "type": "string"
+        },
+        "isin_expiry_date": {
+          "title": "Дата прекращения ISIN",
+          "description": "Дата прекращения ISIN",
+          "type": "string"
+        },
+        "cfi": {
+          "title": "CFI",
+          "description": "CFI код",
+          "type": "string"
+        },
+        "name_short_hde": {
+          "title": "Краткое наименование в ПО ЛУЧ",
+          "description": "Краткое наименование в ПО ЛУЧ",
+          "type": "string"
+        },
+        "form": {
+          "title": "Форма выпуска ",
+          "description": "Форма выпуска ",
+          "$ref": "#/definitions/SecurityForm"
+        },
+        "type_br": {
+          "title": "Классификация Банка России",
+          "description": "Классификация Банка России",
+          "$ref": "#/definitions/SecurityTypeBr"
+        },
+        "for_qualified_investors": {
+          "title": "для квалифицированных инвесторов",
+          "description": "для квалифицированных инвесторов",
+          "type": "boolean"
+        },
+        "listing": {
+          "title": "Торговые площадки",
+          "description": "Торговые площадки",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Listing"
+          }
+        },
+        "storages": {
+          "title": "Места хранения",
+          "description": "Места хранения",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Storage"
+          }
+        },
+        "storages_tier2": {
+          "title": "Места хранения 2 уровня",
+          "description": "Места хранения 2 уровня",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/StorageTier2"
+          }
+        },
+        "tax_types": {
+          "title": "Типы налогов",
+          "description": "Типы налогов",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TaxType"
+          }
+        },
+        "tax_country": {
+          "title": "Страна налогооблажения",
+          "description": "Страна налогооблажения",
+          "$ref": "#/definitions/Country"
+        },
+        "tax_rate": {
+          "title": "Ставка налога на доход % без предоставления налоговых освобождений",
+          "description": "Ставка налога на доход % без предоставления налоговых освобождений",
+          "type": "number"
+        },
+        "tax_group": {
+          "title": "Группа ц.б. для налогооблажения",
+          "description": "Группа ц.б. для налогооблажения",
+          "$ref": "#/definitions/TaxGroup"
+        },
+        "is_nsd_tax_agent": {
+          "title": "Признак НРД - налоговый агент",
+          "description": "Признак НРД - налоговый агент",
+          "type": "boolean"
+        },
+        "is_tax_provided": {
+          "title": "Признак Налог предусмотрен",
+          "description": "Признак Налог предусмотрен",
+          "type": "boolean"
+        },
+        "nsd_date_from": {
+          "title": "Дата приема на обслуживание в НРД",
+          "description": "Дата приема на обслуживание в НРД",
+          "type": "string"
+        },
+        "nsd_date_to": {
+          "title": "Дата снятия с обслуживания в НРД",
+          "description": "Дата снятия с обслуживания в НРД",
+          "type": "string"
+        },
+        "state_reg_date": {
+          "title": "Дата гос. регистрации/дата присвоения",
+          "description": "Дата гос. регистрации/дата присвоения",
+          "type": "string"
+        },
+        "state_reg_authority": {
+          "title": "Регистрирующий орган",
+          "description": "Регистрирующий орган",
+          "$ref": "#/definitions/CompanyShort"
+        },
+        "state": {
+          "title": "Состояние",
+          "description": "Состояние",
+          "$ref": "#/definitions/SecurityState"
+        },
+        "facial_account": {
+          "title": "Лицевой счет",
+          "description": "Лицевой счет",
+          "$ref": "#/definitions/FacialAccount"
+        },
+        "notes": {
+          "title": "Примечания",
+          "description": "Примечания",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "share": {
+          "$ref": "#/definitions/Share"
+        },
+        "bond": {
+          "$ref": "#/definitions/Bond"
+        },
+        "unit": {
+          "$ref": "#/definitions/Unit"
+        },
+        "dep_receipt": {
+          "$ref": "#/definitions/DepReceipt"
+        },
+        "mortgage_certificate": {
+          "$ref": "#/definitions/MortgageCertificate"
+        },
+        "clearing_certificate": {
+          "$ref": "#/definitions/ClearingCertificate"
+        }
+      },
+      "required": [
+        "id",
+        "instr_type",
+        "state"
+      ]
+    },
+    "InstrType": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Id типа ФИ",
+          "description": "Идентификатор типа финансового инструмента",
+          "type": "integer"
+        },
+        "name": {
+          "title": "Наименование типа финансового инструмента",
+          "description": "Наименование типа финансового инструмента",
+          "type": "string"
+        },
+        "name_en": {
+          "title": "Наименование типа финансового инструмента на английском языке",
+          "description": "Наименование типа финансового инструмента на английском языке",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "name_en"
+      ]
+    },
+    "SecurityForm": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Id формы выпуска",
+          "description": "Идентификатор формы выпуска",
+          "type": "integer"
+        },
+        "name": {
+          "title": "Наименование формы выпуска",
+          "description": "Наименование формы выпуска",
+          "type": "string"
+        },
+        "name_en": {
+          "title": "Наименование формы выпуска на английском языке",
+          "description": "Наименование формы выпуска на английском языке",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "name_en"
+      ]
+    },
+    "SecurityTypeBr": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Id классификации Банка России",
+          "description": "Идентификатор классификации Банка России",
+          "type": "integer"
+        },
+        "code": {
+          "title": "Код типа ц.б. по классификации Банка России",
+          "description": "Код типа ц.б. по классификации Банка России",
+          "type": "string"
+        },
+        "name": {
+          "title": "Наименование типа ц.б. по классификации Банка России",
+          "description": "Наименование типа ц.б. по классификации Банка России",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "code",
+        "name"
+      ]
+    },
+    "Listing": {
+      "type": "object",
+      "properties": {
+        "Exchange": {
+          "title": "Биржа",
+          "description": "Биржа",
+          "$ref": "#/definitions/CompanyShort"
+        },
+        "list": {
+          "title": "Листинг",
+          "description": "Листинг",
+          "type": "string"
+        },
+        "code": {
+          "title": "Торговый код ц.б.",
+          "description": "Торговый код ц.б.",
+          "type": "string"
+        },
+        "tks": {
+          "title": "Торгово клиринговая система",
+          "description": "Торгово клиринговая система",
+          "$ref": "#/definitions/Tks"
+        },
+        "listing_date": {
+          "title": "Дата листинга",
+          "description": "Дата листинга",
+          "type": "string"
+        },
+        "trade_in_date": {
+          "title": "Дата допуска к торгам",
+          "description": "Дата допуска к торгам",
+          "type": "string"
+        },
+        "trade_out_date": {
+          "title": "Дата прекращения торгов",
+          "description": "Дата прекращения торгов",
+          "type": "string"
+        }
+      },
+      "required": [
+        "Exchange",
+        "code"
+      ]
+    },
+    "Tks": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "id",
+          "description": "id",
+          "type": "integer"
+        },
+        "code": {
+          "title": "Код",
+          "description": "Код",
+          "type": "string"
+        },
+        "name": {
+          "title": "Наименование",
+          "description": "Наименование",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "code",
+        "name"
+      ]
+    },
+    "Storage": {
+      "type": "object",
+      "properties": {
+        "place": {
+          "title": "Место хранения",
+          "description": "Место хранения",
+          "$ref": "#/definitions/CompanyShort"
+        },
+        "code": {
+          "title": "Код ц.б. в месте хранения",
+          "description": "Код ц.б. в месте хранения",
+          "type": "string"
+        },
+        "is_main": {
+          "title": "Основное место хранения",
+          "description": "Основное место хранения",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "place",
+        "is_main"
+      ]
+    },
+    "StorageTier2": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "title": "Код места хранения 2 уровня",
+          "description": "Код места хранения 2 уровня",
+          "type": "string"
+        },
+        "type": {
+          "title": "Тип",
+          "description": "Тип",
+          "type": "string"
+        },
+        "common_code": {
+          "title": "Common code",
+          "description": "Common code",
+          "type": "string"
+        },
+        "place": {
+          "title": "Место хранения 2 уровня",
+          "description": "Место хранения 2 уровня",
+          "$ref": "#/definitions/CompanyShort"
+        },
+        "country": {
+          "title": "Страна",
+          "description": "Страна",
+          "$ref": "#/definitions/Country"
+        },
+        "rate": {
+          "title": "Тарифный коэффициент",
+          "description": "Тарифный коэффициент",
+          "type": "number"
+        }
+      },
+      "required": [
+        "place",
+        "country",
+        "rate"
+      ]
+    },
+    "TaxType": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "id",
+          "description": "id",
+          "type": "integer"
+        },
+        "code": {
+          "title": "Код",
+          "description": "Код",
+          "type": "string"
+        },
+        "name": {
+          "title": "Наименование",
+          "description": "Наименование",
+          "type": "string"
+        },
+        "name_en": {
+          "title": "Наименование на английском языке",
+          "description": "Наименование на английском языке",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "code",
+        "name",
+        "name_en"
+      ]
+    },
+    "TaxGroup": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "id",
+          "description": "id",
+          "type": "integer"
+        },
+        "code": {
+          "title": "Код",
+          "description": "Код",
+          "type": "string"
+        },
+        "name": {
+          "title": "Наименование",
+          "description": "Наименование",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "code",
+        "name"
+      ]
+    },
+    "SecurityState": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Id состояния состояния ценной бумаги",
+          "description": "Идентификатор состояния состояния ценной бумаги",
+          "type": "integer"
+        },
+        "name": {
+          "title": "Наименование состояния",
+          "description": "Наименование состояния",
+          "type": "string"
+        },
+        "name_en": {
+          "title": "Наименование состояния на английском языке",
+          "description": "Наименование состояния на английском языке",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "name_en"
+      ]
+    },
+    "FacialAccount": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Тип лицевого счета ",
+          "description": "Тип лицевого счета ",
+          "type": "string"
+        },
+        "acc_code": {
+          "title": "Номер лицевого счета",
+          "description": "Номер лицевого счета",
+          "type": "string"
+        },
+        "open_date": {
+          "title": "Дата первого открытия лицевого счета",
+          "description": "Дата первого открытия лицевого счета",
+          "type": "string"
+        },
+        "change_date": {
+          "title": "Дата открытия лицевого счета/изменения типа ЛС",
+          "description": "Дата открытия лицевого счета/изменения типа ЛС",
+          "type": "string"
+        },
+        "close_date": {
+          "title": "Дата закрытия лицевого счета",
+          "description": "Дата закрытия лицевого счета",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ]
+    },
+    "Share": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "title": "Категория акций",
+          "description": "Категория акций",
+          "$ref": "#/definitions/ShareCategory"
+        },
+        "type": {
+          "title": "Тип ц.б.",
+          "description": "Тип ценной бумаги",
+          "$ref": "#/definitions/SecurityType"
+        },
+        "face_value": {
+          "title": "Номинал",
+          "description": "Номинальная стоимость (в валюте номинала)",
+          "type": "number"
+        },
+        "currency": {
+          "title": "Валюта номинала",
+          "description": "Валюта номинала",
+          "$ref": "#/definitions/Currency"
+        },
+        "registrar": {
+          "title": "Регистратор",
+          "description": "Регистратор",
+          "$ref": "#/definitions/CompanyFull"
+        },
+        "placement_type": {
+          "title": "Способ размещения",
+          "description": "Способ размещения",
+          "$ref": "#/definitions/PlacementType"
+        },
+        "issue_size_planned": {
+          "title": "Объявленное количество шт.",
+          "description": "Объявленное количество шт.",
+          "type": "integer"
+        },
+        "issued_size": {
+          "title": "Размещенное количество шт. (текущие данные)",
+          "description": "Размещенное количество шт. (текущие данные)",
+          "type": "integer"
+        },
+        "origin_issued_size": {
+          "title": "Размещенное количество шт.",
+          "description": "Размещенное количество шт. (первоначальные данные)",
+          "type": "integer"
+        },
+        "issue_number": {
+          "title": "Порядковый номер выпуска",
+          "description": "Порядквый номер выпуска",
+          "type": "string"
+        },
+        "rp_reg_date": {
+          "title": "Дата регистрации отчета /уведомления об итогах выпуска",
+          "description": "Дата регистрации отчета /уведомления об итогах выпуска",
+          "type": "string"
+        },
+        "rp_state": {
+          "title": "Состояние отчета /уведомления об итогах выпуска",
+          "description": "Состояние отчета /уведомления об итогах выпуска",
+          "$ref": "#/definitions/RpState"
+        },
+        "rp_reg_authority": {
+          "title": "Регистрирующий орган для отчета/уведомления об итогах выпуска",
+          "description": "Регистрирующий орган для отчета/уведомления об итогах выпуска",
+          "$ref": "#/definitions/CompanyShort"
+        },
+        "start_placement_date": {
+          "title": "Дата начала размещения",
+          "description": "Дата начала размещения",
+          "type": "string"
+        },
+        "end_placement_date": {
+          "title": "Дата окончания размещения",
+          "description": "Дата окончания размещения",
+          "type": "string"
+        },
+        "is_in_pawnshop_list": {
+          "title": "Включен в ломбардный список Банка России",
+          "description": "Признак включения в ломбардный список Банка России",
+          "type": "boolean"
+        },
+        "income_payments": {
+          "title": "КД выплата доходов",
+          "description": "КД выплата доходов",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        },
+        "voluntary_events": {
+          "title": "Добровольные КД",
+          "description": "Добровольные КД",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        },
+        "general_meetings": {
+          "title": "Собрания",
+          "description": "Собрания",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        },
+        "other_events": {
+          "title": "Прочие КД",
+          "description": "Прочие КД",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        }
+      }
+    },
+    "ShareCategory": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Id категории ценной бумаги",
+          "description": "Идентификатор категории ценной бумаги",
+          "type": "integer"
+        },
+        "name_full": {
+          "title": "Полное наименование категории",
+          "description": "Полное наименование категории",
+          "type": "string"
+        },
+        "name_full_en": {
+          "title": "Полное наименование категории на английском языке",
+          "description": "Полное наименование категории на английском языке",
+          "type": "string"
+        },
+        "name_short": {
+          "title": "Краткое наименование категории",
+          "description": "Краткое наименование категории",
+          "type": "string"
+        },
+        "name_short_en": {
+          "title": "Краткое наименование категории на английском языке",
+          "description": "Краткое наименование категории на английском языке",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name_full",
+        "name_full_en",
+        "name_short",
+        "name_short_en"
+      ]
+    },
+    "SecurityType": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Id типа ценной бумаги",
+          "description": "Идентификатор типа ценной бумаги",
+          "type": "integer"
+        },
+        "name": {
+          "title": "Наименование типа ценной бумаги",
+          "description": "Наименование типа ценной бумаги",
+          "type": "string"
+        },
+        "name_en": {
+          "title": "Наименование типа ценной бумаги на английском языке",
+          "description": "Наименование типа ценной бумаги на английском языке",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "name_en"
+      ]
+    },
+    "Currency": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Id валюты",
+          "description": "Идентификатор валюты",
+          "type": "integer"
+        },
+        "code": {
+          "title": "Код",
+          "description": "Код",
+          "type": "string"
+        },
+        "name_short": {
+          "title": "Наименование краткое",
+          "description": "Наименование краткое",
+          "type": "string"
+        },
+        "name_full": {
+          "title": "Наименование полное",
+          "description": "Наименование полное",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "code",
+        "name_full"
+      ]
+    },
+    "CompanyFull": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "id",
+          "description": "id организации",
+          "type": "integer"
+        },
+        "code_nsd": {
+          "title": "Код НРД",
+          "description": "Код НРД",
+          "type": "string"
+        },
+        "name_full": {
+          "title": "Полное наименование",
+          "description": "Полное наименование",
+          "type": "string"
+        },
+        "name_full_en": {
+          "title": "Полное наименование на английском языке",
+          "description": "Полное наименование на английском языке",
+          "type": "string"
+        },
+        "name_short": {
+          "title": "Краткое наименование",
+          "description": "Краткое наименование",
+          "type": "string"
+        },
+        "name_short_en": {
+          "title": "Краткое наименование на английском языке",
+          "description": "Краткое наименование на английском языке",
+          "type": "string"
+        },
+        "name_full_tr": {
+          "title": "Полное транслитерированное наименование",
+          "description": "Полное транслитерированное наименование",
+          "type": "string"
+        },
+        "name_short_tr": {
+          "title": "Краткое транслитерированное наименование",
+          "description": "Краткое транслитерированное наименование",
+          "type": "string"
+        },
+        "name_short_hde": {
+          "title": "Краткое наименование в ПО ЛУЧ",
+          "description": "Краткое наименование в ПО ЛУЧ",
+          "type": "string"
+        },
+        "inn": {
+          "title": "ИНН",
+          "description": "ИНН",
+          "type": "string"
+        },
+        "company_type": {
+          "title": "Организационно-правовая форма",
+          "description": "Организационно-правовая форма",
+          "$ref": "#/definitions/CompanyType"
+        },
+        "cmp_code_fcsm": {
+          "title": "Уникальный код эмитента, присвоенный регистрирующим органом",
+          "description": "Уникальный код эмитента, присвоенный регистрирующим органом",
+          "type": "string"
+        },
+        "kpp": {
+          "title": "КПП",
+          "description": "КПП",
+          "type": "string"
+        },
+        "credit_cmp": {
+          "title": "Кредитная организация",
+          "description": "Признак кредитной организации (для российских организаций)",
+          "type": "boolean"
+        },
+        "is_bank_4_non_resident": {
+          "title": "Банк",
+          "description": "Признак Банк / не банк (для иностранных организаций)",
+          "type": "boolean"
+        },
+        "okpo": {
+          "title": "ОКПО",
+          "description": "ОКПО",
+          "type": "string"
+        },
+        "bik": {
+          "title": "БИК",
+          "description": "БИК",
+          "type": "string"
+        },
+        "state_reg_num": {
+          "title": "Регистрационный номер",
+          "description": "Номер гоcударственной регистрации при создании",
+          "type": "string"
+        },
+        "state_reg_date": {
+          "title": "Дата гос. регистрации",
+          "description": "Дата государственной регистрации при создании",
+          "type": "string"
+        },
+        "state_reg_authority": {
+          "title": "Регистрирующий орган",
+          "description": "Регистрирующий орган",
+          "$ref": "#/definitions/CompanyShort"
+        },
+        "ogrn": {
+          "title": "ОГРН",
+          "description": "ОГРН",
+          "type": "string"
+        },
+        "egrul_date": {
+          "title": "Дата внесения записи в ЕГРЮЛ",
+          "description": "Дата внесения записи в ЕГРЮЛ",
+          "type": "string"
+        },
+        "egrul_authority": {
+          "title": "Налоговый орган",
+          "description": "Налоговый орган",
+          "$ref": "#/definitions/CompanyShort"
+        },
+        "country": {
+          "title": "Страна местонахождения",
+          "description": "Страна местонахождения",
+          "$ref": "#/definitions/Country"
+        },
+        "market": {
+          "title": "Сектор рынка",
+          "description": "Сектор рынка",
+          "$ref": "#/definitions/Market"
+        },
+        "auth_capital": {
+          "title": "Уставный капитал",
+          "description": "Уставный капитал",
+          "type": "number"
+        },
+        "fio_head": {
+          "title": "Первое лицо",
+          "description": "Фамилия Имя Отчество (полностью) первого лица организации",
+          "type": "string"
+        },
+        "position_head": {
+          "title": "Должность первого лица",
+          "description": "Должность первого лица",
+          "type": "string"
+        },
+        "address": {
+          "title": "Адрес местонахождения",
+          "description": "Адрес местонахождения",
+          "type": "string"
+        },
+        "address_en": {
+          "title": "Адрес местонахождения на английском языке",
+          "description": "Адрес местонахождения на английском языке",
+          "type": "string"
+        },
+        "post_address": {
+          "title": "Адрес почтовый",
+          "description": "Адрес почтовый",
+          "type": "string"
+        },
+        "phone": {
+          "title": "Телефон",
+          "description": "Телефон",
+          "type": "string"
+        },
+        "fax": {
+          "title": "Факс",
+          "description": "Факс",
+          "type": "string"
+        },
+        "e_mail": {
+          "title": "E-mail",
+          "description": "Адрес электронной почты",
+          "type": "string"
+        },
+        "www": {
+          "title": "Веб-сайт организации",
+          "description": "Веб-сайт организации",
+          "type": "string"
+        },
+        "lei_code": {
+          "title": "LEI код",
+          "description": "LEI код",
+          "type": "string"
+        },
+        "lei_assignment_date": {
+          "title": "Дата присвоения кода LEI",
+          "description": "Дата присвоения кода LEI",
+          "type": "string"
+        },
+        "lei_verification_date": {
+          "title": "Дата последней верификации кода LEI",
+          "description": "Дата последней верификации кода LEI",
+          "type": "string"
+        },
+        "okved": {
+          "title": "ОКВЭД",
+          "description": "ОКВЭД",
+          "type": "string"
+        },
+        "tin": {
+          "title": "TIN",
+          "description": "TIN",
+          "type": "string"
+        },
+        "tax_number": {
+          "title": "Номер налоговой регистрации",
+          "description": "Номер налоговой регистрации",
+          "type": "string"
+        },
+        "licences": {
+          "title": "Лицензии",
+          "description": "Лицензии",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Licence"
+          }
+        },
+        "is_resident": {
+          "title": "Резидент",
+          "description": "Резидент",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "PlacementType": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Id способа размещения ценных бумаг",
+          "description": "Идентификатор способа размещения ценных бумаг",
+          "type": "integer"
+        },
+        "name": {
+          "title": "Наименование способа размещения ценных бумаг",
+          "description": "Наименование способа размещения ценных бумаг",
+          "type": "string"
+        },
+        "name_en": {
+          "title": "Наименование способа размещения ценных бумаг на английском языке",
+          "description": "Наименование способа размещения ценных бумаг на английском языке",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "name_en"
+      ]
+    },
+    "RpState": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "title": "ID состояния отчета/уведомления об итогах выпуска",
+          "description": "Идентификатор состояния отчета/уведомления об итогах выпуска",
+          "type": "string"
+        },
+        "name": {
+          "title": "Наименование состояния отчета/уведомления об итогах выпуска",
+          "description": "Наименование состояния отчета/уведомления об итогах выпуска",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "name"
+      ]
+    },
+    "CorpAction": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "id",
+          "description": "id КД",
+          "type": "integer"
+        },
+        "corp_action_type": {
+          "title": "Тип КД",
+          "description": "Тип КД",
+          "$ref": "#/definitions/CorpActionType"
+        },
+        "state": {
+          "title": "Состояние КД",
+          "description": "Состояние КД",
+          "$ref": "#/definitions/CorpActionState"
+        },
+        "action_date_calc": {
+          "title": "Дата КД расчетная",
+          "description": "Дата КД расчетная",
+          "type": "string"
+        },
+        "action_date_plan": {
+          "title": "Дата КД плановая",
+          "description": "Дата КД плановая",
+          "type": "string"
+        },
+        "action_date_fact": {
+          "title": "Дата КД фактическая",
+          "description": "Дата КД фактическая",
+          "type": "string"
+        },
+        "record_date_calc": {
+          "title": "Дата фиксации расчетная",
+          "description": "Дата фиксации расчетная",
+          "type": "string"
+        },
+        "record_date_plan": {
+          "title": "Время фиксации списка",
+          "description": "Время фиксации списка",
+          "type": "string"
+        },
+        "record_time": {
+          "title": "Дата фиксации плановая",
+          "description": "Дата фиксации плановая",
+          "type": "string"
+        },
+        "lock_date_calc": {
+          "title": "Дата блокировки расчетная",
+          "description": "Дата блокировки расчетная",
+          "type": "string"
+        },
+        "lock_date_plan": {
+          "title": "Дата блокировки плановая",
+          "description": "Дата блокировки плановая",
+          "type": "string"
+        },
+        "unlock_date_calc": {
+          "title": "Дата разблокировки расчетная",
+          "description": "Дата разблокировки расчетная",
+          "type": "string"
+        },
+        "unlock_date_plan": {
+          "title": "Дата разблокировки плановая",
+          "description": "Дата разблокировки плановая",
+          "type": "string"
+        },
+        "coupon": {
+          "title": "Купон",
+          "description": "Купон",
+          "$ref": "#/definitions/Coupon"
+        },
+        "repayment": {
+          "title": "Погашение",
+          "description": "Погашение",
+          "$ref": "#/definitions/Repayment"
+        },
+        "meeting": {
+          "title": "Собрание",
+          "description": "Собрание",
+          "$ref": "#/definitions/Meeting"
+        },
+        "conversion": {
+          "title": "Конвертация",
+          "description": "Конвертация",
+          "$ref": "#/definitions/Convertion"
+        }
+      },
+      "required": [
+        "id",
+        "corp_action_type",
+        "state",
+        "action_date_plan"
+      ]
+    },
+    "CorpActionType": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Id типа КД",
+          "description": "Идентификатор типа КД",
+          "type": "integer"
+        },
+        "code": {
+          "title": "Код типа КД",
+          "description": "Код типа КД",
+          "type": "string"
+        },
+        "name": {
+          "title": "Наименование КД",
+          "description": "Наименование КД",
+          "type": "string"
+        },
+        "name_en": {
+          "title": "Наименование КД на английском языке",
+          "description": "Наименование КД на английском языке",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "code",
+        "name",
+        "name_en"
+      ]
+    },
+    "CorpActionState": {
+      "type": "object",
+      "properties": {
+        "state_mn": {
+          "title": "Мнемокод состояния КД",
+          "description": "Мнемокод состояния КД",
+          "type": "string"
+        },
+        "name": {
+          "title": "Наименование состояния КД",
+          "description": "Наименование состояния КД",
+          "type": "string"
+        }
+      },
+      "required": [
+        "state_mn",
+        "name"
+      ]
+    },
+    "Coupon": {
+      "type": "object",
+      "properties": {
+        "number": {
+          "title": "Порядковый номер купона",
+          "description": "Порядковый номер купона",
+          "type": "integer"
+        },
+        "rate": {
+          "title": "Ставка купона в % годовых ",
+          "description": "Ставка купона в % годовых ",
+          "type": "number"
+        },
+        "size": {
+          "title": "Размер выплаты купонного дохода на 1 ц.б. (в валюте платежа)",
+          "description": "Размер выплаты купонного дохода на 1 ц.б. (в валюте платежа)",
+          "type": "number"
+        },
+        "currency": {
+          "title": "Валюта платежа",
+          "description": "Валюта платежа",
+          "$ref": "#/definitions/Currency"
+        },
+        "period_from_calc": {
+          "title": "Дата начала купонного периода расчетная",
+          "description": "Дата начала купонного периода расчетная",
+          "type": "string"
+        },
+        "period_to_calc": {
+          "title": "Дата окончания купонного периода расчетная",
+          "description": "Дата окончания купонного периода расчетная",
+          "type": "string"
+        },
+        "period_from_plan": {
+          "title": "Дата начала купонного периода плановая",
+          "description": "Дата начала купонного периода плановая",
+          "type": "string"
+        },
+        "period_to_plan": {
+          "title": "Дата окончания купонного периода плановая",
+          "description": "Дата окончания купонного периода плановая",
+          "type": "string"
+        }
+      }
+    },
+    "Repayment": {
+      "type": "object",
+      "properties": {
+        "number": {
+          "title": "Номер частичного досрочного погашения основного долга",
+          "description": "Номер частичного досрочного погашения основного долга",
+          "type": "integer"
+        },
+        "size_percent": {
+          "title": "Ставка в % погашения части номинальной стоимости",
+          "description": "Ставка в % погашения части номинальной стоимости",
+          "type": "number"
+        },
+        "size_cur": {
+          "title": "Размер погашаемой части в валюте платежа",
+          "description": "Размер погашаемой части в валюте платежа",
+          "type": "number"
+        },
+        "currency": {
+          "title": "Валюта платежа",
+          "description": "Валюта платежа",
+          "$ref": "#/definitions/Currency"
+        }
+      }
+    },
+    "Meeting": {
+      "type": "object",
+      "properties": {
+        "form": {
+          "title": "Форма проведения ",
+          "description": "Форма проведения ",
+          "$ref": "#/definitions/MeetingForm"
+        },
+        "agenda": {
+          "title": "Повестка дня",
+          "description": "Повестка дня",
+          "type": "string"
+        },
+        "results": {
+          "title": "Итоги собрания",
+          "description": "Итоги собрания",
+          "type": "string"
+        },
+        "meeting_date": {
+          "title": "Дата проведения",
+          "description": "Дата проведения",
+          "type": "string"
+        },
+        "meeting_time": {
+          "title": "Время проведения",
+          "description": "Время проведения",
+          "type": "string"
+        },
+        "address": {
+          "title": "Адрес",
+          "description": "Адрес",
+          "type": "string"
+        },
+        "issues": {
+          "title": "Вопросы собрания",
+          "description": "Вопросы собрания",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AgendaIssue"
+          }
+        }
+      }
+    },
+    "MeetingForm": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "title": "Мнемокод",
+          "description": "Мнемокод",
+          "type": "string"
+        },
+        "name": {
+          "title": "Наименование",
+          "description": "Наименование",
+          "type": "string"
+        },
+        "name_en": {
+          "title": "Наименование на английском языке",
+          "description": "Наименование на английском языке",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "name",
+        "name_en"
+      ]
+    },
+    "AgendaIssue": {
+      "type": "object",
+      "properties": {
+        "theme": {
+          "title": "Тема вопроса",
+          "description": "Тема вопроса",
+          "$ref": "#/definitions/AgendaTheme"
+        },
+        "decision": {
+          "title": "Решение",
+          "description": "Решение",
+          "$ref": "#/definitions/Decision"
+        }
+      },
+      "required": [
+        "theme",
+        "decision"
+      ]
+    },
+    "AgendaTheme": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "id",
+          "description": "id",
+          "type": "integer"
+        },
+        "code": {
+          "title": "Мнемокод",
+          "description": "Мнемокод",
+          "type": "string"
+        },
+        "name": {
+          "title": "Наименование",
+          "description": "Наименование",
+          "type": "string"
+        },
+        "name_en": {
+          "title": "Наименование на английском языке",
+          "description": "Наименование на английском языке",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "code",
+        "name",
+        "name_en"
+      ]
+    },
+    "Decision": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "title": "Мнемокод",
+          "description": "Мнемокод",
+          "type": "string"
+        },
+        "name": {
+          "title": "Наименование",
+          "description": "Наименование",
+          "type": "string"
+        },
+        "name_en": {
+          "title": "Наименование на английском языке",
+          "description": "Наименование на английском языке",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "name",
+        "name_en"
+      ]
+    },
+    "Convertion": {
+      "type": "object",
+      "properties": {
+        "authority_date": {
+          "title": "Дата принятия решения рег. органом",
+          "description": "Дата принятия решения рег. Органом",
+          "type": "string"
+        },
+        "registrar_date": {
+          "title": "Дата проведения КД реестродержателем",
+          "description": "Дата проведения КД реестродержателем",
+          "type": "string"
+        },
+        "nsd_date": {
+          "title": "Дата проведения КД в НРД",
+          "description": "Дата проведения КД в НРД",
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ConvertionItem"
+          }
+        }
+      }
+    },
+    "ConvertionItem": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "$ref": "#/definitions/SecurityShort"
+        },
+        "target": {
+          "$ref": "#/definitions/SecurityShort"
+        },
+        "source_numerator": {
+          "type": "number"
+        },
+        "source_denominator": {
+          "type": "number"
+        },
+        "target_numerator": {
+          "type": "number"
+        },
+        "target_denominator": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "source",
+        "target"
+      ]
+    },
+    "SecurityShort": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "id",
+          "description": "Идентификатор ценной бумаги",
+          "type": "integer"
+        },
+        "isin": {
+          "title": "ISIN",
+          "description": "ISIN код",
+          "type": "string"
+        },
+        "code_nsd": {
+          "title": "Код НРД",
+          "description": "Код НРД",
+          "type": "string"
+        },
+        "name_full": {
+          "title": "Полное наименование",
+          "description": "Полное наименование ценной бумаги",
+          "type": "string"
+        },
+        "name_full_en": {
+          "title": "Полное наименование на английском языке",
+          "description": "Полное наименование на английском языке",
+          "type": "string"
+        },
+        "instr_type": {
+          "title": "Тип ФИ",
+          "description": "Тип финансового инструмента",
+          "$ref": "#/definitions/InstrType"
+        },
+        "state_reg_number": {
+          "title": "Номер гос. регистрации/Идентификационный номер",
+          "description": "Номер гос. регистрации/Идентификационный номер",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "instr_type"
+      ]
+    },
+    "Bond": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Тип ценной бумаги",
+          "description": "Тип ценной бумаги",
+          "$ref": "#/definitions/SecurityType"
+        },
+        "issue_number": {
+          "title": "Порядковый номер выпуска",
+          "description": "Порядковый номер выпуска",
+          "type": "string"
+        },
+        "rp_reg_date": {
+          "title": "Дата регистрации отчета /уведомления об итогах выпуска",
+          "description": "Дата регистрации отчета /уведомления об итогах выпуска",
+          "type": "string"
+        },
+        "rp_state": {
+          "title": "Состояние отчета /уведомления об итогах выпуска",
+          "description": "Состояние отчета /уведомления об итогах выпуска",
+          "$ref": "#/definitions/RpState"
+        },
+        "rp_reg_authority": {
+          "title": "Регистрирующий орган для отчета/уведомления об итогах выпуска",
+          "description": "Регистрирующий орган для отчета/уведомления об итогах выпуска",
+          "$ref": "#/definitions/CompanyShort"
+        },
+        "start_placement_date": {
+          "title": "Дата начала размещения",
+          "description": "Дата начала размещения",
+          "type": "string"
+        },
+        "end_placement_date": {
+          "title": "Дата окончания размещения",
+          "description": "Дата окончания размещения",
+          "type": "string"
+        },
+        "placement_type": {
+          "title": "Способ размещения",
+          "description": "Способ размещения",
+          "$ref": "#/definitions/PlacementType"
+        },
+        "issue_size_planned": {
+          "title": "Объявленное количество шт.",
+          "description": "Объявленное количество шт.",
+          "type": "integer"
+        },
+        "issued_size": {
+          "title": "Размещенное количество шт.",
+          "description": "Размещенное количество шт.",
+          "type": "integer"
+        },
+        "face_value": {
+          "title": "Номинал",
+          "description": "Номинальная стоимость (в валюте номинала)",
+          "type": "number"
+        },
+        "face_value_calendar": {
+          "title": "Календарь номиналов",
+          "description": "Календарь номиналов",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FaceValueCalendar"
+          }
+        },
+        "maturity_value": {
+          "title": "Текущий номинал",
+          "description": "Текущая номинальная стоимость (в валюте номинала)",
+          "type": "number"
+        },
+        "currency": {
+          "title": "Валюта номинала",
+          "description": "Валюта номинала",
+          "$ref": "#/definitions/Currency"
+        },
+        "expiry_date_calc": {
+          "title": "Дата погашения расчетная",
+          "description": "Дата погашения расчетная",
+          "type": "string"
+        },
+        "expiry_date_plan": {
+          "title": "Дата погашения плановая",
+          "description": "Дата погашения плановая",
+          "type": "string"
+        },
+        "rate_type": {
+          "title": "Тип купона",
+          "description": "Тип купона",
+          "$ref": "#/definitions/RateType"
+        },
+        "coupons_number": {
+          "title": "Количество купонов",
+          "description": "Количество купонов",
+          "type": "integer"
+        },
+        "live_period": {
+          "title": "Период обращения",
+          "description": "Период обращения",
+          "type": "integer"
+        },
+        "first_coupon_date": {
+          "title": "Дата начала начисления первого купона",
+          "description": "Дата начала начисления первого купона",
+          "type": "string"
+        },
+        "coupon_period_type": {
+          "title": "Периодичность",
+          "description": "Периодичность выплаты купона",
+          "$ref": "#/definitions/CouponPeriodType"
+        },
+        "coupon_period_base": {
+          "title": "База расчета",
+          "description": "База расчета",
+          "$ref": "#/definitions/CouponPeriodBase"
+        },
+        "registrar": {
+          "title": "Регистратор",
+          "description": "Регистратор",
+          "$ref": "#/definitions/CompanyFull"
+        },
+        "depository": {
+          "title": "Уполномоченный депозитарий",
+          "description": "Уполномоченный депозитарий",
+          "$ref": "#/definitions/CompanyFull"
+        },
+        "place_price": {
+          "title": "Цена размещения",
+          "description": "Цена размещения в валюте номинала",
+          "type": "number"
+        },
+        "min_lot": {
+          "title": "Минимальный лот",
+          "description": "Минимальный лот",
+          "type": "number"
+        },
+        "bond_series": {
+          "title": "Серия",
+          "description": "Серия облигации",
+          "type": "string"
+        },
+        "for_market_bonds": {
+          "title": "Биржевой",
+          "description": "Признак биржевого выпуска облигаций",
+          "type": "boolean"
+        },
+        "state_ex": {
+          "title": "Дополнительная информация о состоянии",
+          "description": "Дополнительная информация о состоянии",
+          "$ref": "#/definitions/SecurityStateEx"
+        },
+        "is_in_pawnshop_list": {
+          "title": "Включен в ломбардный список Банка России",
+          "description": "Признак включения в ломбардный список Банка России",
+          "type": "boolean"
+        },
+        "guarantors": {
+          "title": "Гарант/Поручитель",
+          "description": "Гарант/Поручитель",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CompanyShort"
+          }
+        },
+        "debtors": {
+          "title": "Организатор выпуска",
+          "description": "Организатор выпуска",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CompanyShort"
+          }
+        },
+        "organizers": {
+          "title": "Заемщик",
+          "description": "Заемщик",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CompanyShort"
+          }
+        },
+        "income_payments": {
+          "title": "КД выплата доходов",
+          "description": "КД выплата доходов",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        },
+        "voluntary_events": {
+          "title": "Добровольные КД",
+          "description": "Добровольные КД",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        },
+        "general_meetings": {
+          "title": "Собрания",
+          "description": "Собрания",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        },
+        "other_events": {
+          "title": "Прочие КД",
+          "description": "Прочие КД",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        },
+        "bond_prog": {
+          "title": "Программа облигаций",
+          "description": "Программа облигаций",
+          "$ref": "#/definitions/BondProg"
+        }
+      }
+    },
+    "FaceValueCalendar": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "title": "Дата",
+          "description": "Дата",
+          "type": "string"
+        },
+        "value": {
+          "title": "Величина номинальной стоимости (в валюте номинала) ",
+          "description": "Величина номинальной стоимости (в валюте номинала) ",
+          "type": "number"
+        }
+      },
+      "required": [
+        "date",
+        "value"
+      ]
+    },
+    "RateType": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Id типа купона",
+          "description": "Идентификатор типа купона",
+          "type": "integer"
+        },
+        "code": {
+          "title": "Код",
+          "description": "Код",
+          "type": "string"
+        },
+        "name": {
+          "title": "Наименование типа купона",
+          "description": "Наименование типа купона",
+          "type": "string"
+        },
+        "name_en": {
+          "title": "Наименование типа купона на английском языке",
+          "description": "Наименование типа купона на английском языке",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "code",
+        "name",
+        "name_en"
+      ]
+    },
+    "CouponPeriodType": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Id типа купонного периода",
+          "description": "Идентификатор типа купонного периода",
+          "type": "integer"
+        },
+        "code": {
+          "title": "Код",
+          "description": "Код",
+          "type": "string"
+        },
+        "name": {
+          "title": "Наименование типа купонного периода",
+          "description": "Наименование типа купонного периода",
+          "type": "string"
+        },
+        "name_en": {
+          "title": "Наименование типа купонного периода на английском языке",
+          "description": "Наименование типа купонного периода на английском языке",
+          "type": "string"
+        },
+        "per_year": {
+          "title": "Количество в год",
+          "description": "Количество в год",
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "code",
+        "name",
+        "name_en"
+      ]
+    },
+    "CouponPeriodBase": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Id базы расчета",
+          "description": "Идентификатор базы расчета",
+          "type": "integer"
+        },
+        "name": {
+          "title": "Наименование базы расчета",
+          "description": "Наименование базы расчета",
+          "type": "string"
+        },
+        "base_month": {
+          "title": "Базовый месяц",
+          "description": "Базовый месяц",
+          "type": "string"
+        },
+        "base_year": {
+          "title": "Базовый год",
+          "description": "Базовый год",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "base_month",
+        "base_year"
+      ]
+    },
+    "SecurityStateEx": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Id состояния доп. состояния ценной бумаги",
+          "description": "Идентификатор доп. состояния состояния ценной бумаги",
+          "type": "integer"
+        },
+        "name": {
+          "title": "Наименование доп. состояния",
+          "description": "Наименование доп. состояния",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    },
+    "BondProg": {
+      "type": "object",
+      "properties": {
+        "number": {
+          "title": "Номер программы",
+          "description": "Номер программы",
+          "type": "string"
+        },
+        "reg_date": {
+          "title": "Дата регистрации программы",
+          "description": "Дата регистрации программы",
+          "type": "string"
+        },
+        "declared_volume": {
+          "title": "Заявленный объем программы",
+          "description": "Заявленный объем программы",
+          "type": "number"
+        },
+        "is_in_pawnshop_list": {
+          "title": "Программа облигаций включена в ломбардный список",
+          "description": "Программа облигаций включена в ломбардный список",
+          "type": "boolean"
+        },
+        "currency": {
+          "title": "Валюта",
+          "description": "Валюта",
+          "$ref": "#/definitions/Currency"
+        }
+      }
+    },
+    "Unit": {
+      "type": "object",
+      "properties": {
+        "managing": {
+          "title": "Управляющая компания",
+          "description": "Управляющая компания",
+          "$ref": "#/definitions/CompanyFull"
+        },
+        "registrar": {
+          "title": "Регистратор",
+          "description": "Регистратор",
+          "$ref": "#/definitions/CompanyFull"
+        },
+        "depository": {
+          "title": "Спец. депозитарий",
+          "description": "Спец. депозитарий",
+          "$ref": "#/definitions/CompanyFull"
+        },
+        "pif_state": {
+          "title": "Состояние ПИФ",
+          "description": "Состояние ПИФ",
+          "$ref": "#/definitions/CompanyState"
+        },
+        "pif_type": {
+          "title": "Тип ПИФ",
+          "description": "Тип ПИФ",
+          "$ref": "#/definitions/PifType"
+        },
+        "invest_object": {
+          "title": "Объект инвестиций",
+          "description": "Объект инвестиций",
+          "$ref": "#/definitions/InvestObject"
+        },
+        "exchange_traded": {
+          "title": "Биржевой",
+          "description": "Биржевой",
+          "type": "boolean"
+        },
+        "fraction": {
+          "title": "Количество знаков после запятой",
+          "description": "Количество знаков после запятой",
+          "type": "integer"
+        },
+        "pais_count": {
+          "title": "Количество",
+          "description": "Количество",
+          "type": "number"
+        },
+        "contract_date_to": {
+          "title": "Дата окончания срока действия договора",
+          "description": "Дата окончания срока действия договора",
+          "type": "string"
+        },
+        "contract_prolong_date_to": {
+          "title": "Срок действия договора доверительного управления изменен на",
+          "description": "Срок действия договора доверительного управления изменен на",
+          "type": "string"
+        },
+        "create_date_begin": {
+          "title": "Дата начала формирования ПИФ",
+          "description": "Дата начала формирования ПИФ",
+          "type": "string"
+        },
+        "create_date_end_plan": {
+          "title": "Дата окончания формирования ПИФ (плановая)",
+          "description": "Дата окончания формирования ПИФ (плановая)",
+          "type": "string"
+        },
+        "create_date_end_fact": {
+          "title": "Дата окончания формирования ПИФ (фактическая)",
+          "description": "Дата окончания формирования ПИФ (фактическая)",
+          "type": "string"
+        },
+        "income_payments": {
+          "title": "КД выплата доходов",
+          "description": "КД выплата доходов",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        },
+        "voluntary_events": {
+          "title": "Добровольные КД",
+          "description": "Добровольные КД",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        },
+        "general_meetings": {
+          "title": "Собрания",
+          "description": "Собрания",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        },
+        "other_events": {
+          "title": "Прочие КД",
+          "description": "Прочие КД",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        }
+      },
+      "required": [
+        "managing"
+      ]
+    },
+    "CompanyState": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "title": "Мнемокод состояния организации",
+          "description": "Мнемокод состояния организации",
+          "type": "string"
+        },
+        "name": {
+          "title": "Наименование состояния организации",
+          "description": "Наименование состояния организации",
+          "type": "string"
+        },
+        "name_en": {
+          "title": "Наименование состояния организации на английском языке",
+          "description": "Наименование состояния организации на английском языке",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "name",
+        "name_en"
+      ]
+    },
+    "PifType": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "title": "Мнемокод типа ПИФ",
+          "description": "Мнемокод типа ПИФ",
+          "type": "string"
+        },
+        "name": {
+          "title": "Тип ПИФ",
+          "description": "Наименование типа ПИФ",
+          "type": "string"
+        },
+        "name_en": {
+          "title": "Тип ПИФ на английском языке",
+          "description": "Наименование типа ПИФ на английском языке",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "name",
+        "name_en"
+      ]
+    },
+    "InvestObject": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "id",
+          "description": "id",
+          "type": "integer"
+        },
+        "name": {
+          "title": "Наименование объекта инвестиций",
+          "description": "Наименование объекта инвестиций",
+          "type": "string"
+        },
+        "name_en": {
+          "title": "Наименование объекта инвестиций на английском языке",
+          "description": "Наименование объекта инвестиций на английском языке",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "name_en"
+      ]
+    },
+    "DepReceipt": {
+      "type": "object",
+      "properties": {
+        "repres_issuer": {
+          "title": "Эмитент представляемой (базовой) ц.б.",
+          "description": "Эмитент представляемой (базовой) ц.б.",
+          "$ref": "#/definitions/CompanyShort"
+        },
+        "repres_fi_isin": {
+          "title": "ISIN представляемой (базовой) ц.б.",
+          "description": "ISIN представляемой (базовой) ц.б.",
+          "type": "string"
+        },
+        "registrar": {
+          "title": "Регистратор",
+          "description": "Регистратор",
+          "$ref": "#/definitions/CompanyFull"
+        },
+        "placement_type": {
+          "title": "Способ размещения",
+          "description": "Способ размещения",
+          "$ref": "#/definitions/PlacementType"
+        },
+        "placement_date": {
+          "title": "Дата начала размещения",
+          "description": "Дата начала размещения",
+          "type": "string"
+        },
+        "dr_category": {
+          "title": "Категория ДР",
+          "description": "Категория ДР",
+          "$ref": "#/definitions/DrCategory"
+        },
+        "is_sponsored": {
+          "title": "Спонсируемые/Неспонсируемые",
+          "description": "Спонсируемые/Неспонсируемые",
+          "type": "boolean"
+        },
+        "prog": {
+          "title": "Программа ДР",
+          "description": "Программа ДР",
+          "$ref": "#/definitions/DrProgram"
+        },
+        "ratio_numerator": {
+          "title": "Количество ДР",
+          "description": "Количество ДР",
+          "type": "integer"
+        },
+        "ratio_denominator": {
+          "title": "Количество представляемых ц.б.",
+          "description": "Количество представляемых ц.б.",
+          "type": "integer"
+        },
+        "income_payments": {
+          "title": "КД выплата доходов",
+          "description": "КД выплата доходов",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        },
+        "voluntary_events": {
+          "title": "Добровольные КД",
+          "description": "Добровольные КД",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        },
+        "general_meetings": {
+          "title": "Собрания",
+          "description": "Собрания",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        },
+        "other_events": {
+          "title": "Прочие КД",
+          "description": "Прочие КД",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        },
+        "volume": {
+          "title": "Максимальное количество в обращении",
+          "description": "Максимальное количество в обращении",
+          "type": "integer"
+        },
+        "register_date": {
+          "title": "Дата регистрации максимального количества в обращении",
+          "description": "Дата регистрации максимального количества в обращении",
+          "type": "string"
+        }
+      }
+    },
+    "DrCategory": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Id категории ДР ",
+          "description": "Идентификатор категории ДР",
+          "type": "integer"
+        },
+        "code": {
+          "title": "Код",
+          "description": "Код",
+          "type": "string"
+        },
+        "name": {
+          "title": "Наименование категории ДР",
+          "description": "Наименование категории ДР",
+          "type": "string"
+        },
+        "name_en": {
+          "title": "Наименование категории ДР на английском языке",
+          "description": "Наименование категории ДР на английском языке",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "code",
+        "name",
+        "name_en"
+      ]
+    },
+    "DrProgram": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Id программы ДР",
+          "description": "Идентификатор программы ДР",
+          "type": "integer"
+        },
+        "name": {
+          "title": "Наименование программы ДР",
+          "description": "Наименование программы ДР",
+          "type": "string"
+        },
+        "name_en": {
+          "title": "Наименование программы ДР на английском языке",
+          "description": "Наименование программы ДР на английском языке",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "name_en"
+      ]
+    },
+    "MortgageCertificate": {
+      "type": "object",
+      "properties": {
+        "managing": {
+          "title": "Управляющий ипотечным покрытием",
+          "description": "Управляющий ипотечным покрытием",
+          "$ref": "#/definitions/CompanyFull"
+        },
+        "registrar": {
+          "title": "Регистратор",
+          "description": "Регистратор",
+          "$ref": "#/definitions/CompanyFull"
+        },
+        "depository": {
+          "title": "Спец. депозитарий",
+          "description": "Специализированный депозитарий",
+          "$ref": "#/definitions/CompanyFull"
+        },
+        "mc_state": {
+          "title": "Состояние ИСУ",
+          "description": "Состояние ИСУ",
+          "$ref": "#/definitions/CompanyState"
+        },
+        "fraction": {
+          "title": "Количество знаков после запятой",
+          "description": "Количество знаков после запятой",
+          "type": "integer"
+        },
+        "mc_count": {
+          "title": "Количество",
+          "description": "Количество",
+          "type": "number"
+        },
+        "income_payments": {
+          "title": "КД выплата доходов",
+          "description": "КД выплата доходов",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        },
+        "voluntary_events": {
+          "title": "Добровольные КД",
+          "description": "Добровольные КД",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        },
+        "general_meetings": {
+          "title": "Собрания",
+          "description": "Собрания",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        },
+        "other_events": {
+          "title": "Прочие КД",
+          "description": "Прочие КД",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        }
+      },
+      "required": [
+        "managing"
+      ]
+    },
+    "ClearingCertificate": {
+      "type": "object",
+      "properties": {
+        "depository": {
+          "title": "Уполномоченный депозитарий",
+          "description": "Уполномоченный депозитарий",
+          "$ref": "#/definitions/CompanyFull"
+        },
+        "face_value": {
+          "title": "Номинал",
+          "description": "Номинальная стоимость (в валюте номинала)",
+          "type": "number"
+        },
+        "currency": {
+          "title": "Валюта номинала",
+          "description": "Валюта номинала",
+          "$ref": "#/definitions/Currency"
+        },
+        "income_payments": {
+          "title": "КД выплата доходов",
+          "description": "КД выплата доходов",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        },
+        "voluntary_events": {
+          "title": "Добровольные КД",
+          "description": "Добровольные КД",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        },
+        "general_meetings": {
+          "title": "Собрания",
+          "description": "Собрания",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        },
+        "other_events": {
+          "title": "Прочие КД",
+          "description": "Прочие КД",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpAction"
+          }
+        }
+      }
+    }
+  }
+}
