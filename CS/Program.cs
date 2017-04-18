@@ -6,13 +6,12 @@ using System.Net;
 using Newtonsoft.Json.Linq;
 using ClosedXML.Excel;
 
-// v0
 namespace ApiSample
 {
     class Program
     {
-        public const string ApiUrl = "http://0.0.0.0:5000/securities?limit=100"; 
-        public static HashSet<string> SetOfIsins = new HashSet<string>(new[] { "RU0007202057", "RU0007202545", "RU0007201018", "RU0007202032" });
+        public const string ApiUrl = "http://0.0.0.0/api/get/securities?limit=50&skip=20150"; 
+        public static HashSet<string> SetOfIsins = new HashSet<string>(new[] { "XS0342241295", "RU000A0JS9F8" });
         public const string FileName = "coupons.xlsx";
 
         static void Main(string[] args)
@@ -51,7 +50,7 @@ namespace ApiSample
             var data = new List<List<JToken>>();
             foreach (var bond in input)
             {
-                var corpActions = bond["corp_actions"]?.ToArray();
+                var corpActions = bond["bond"]?["income_payments"].ToArray();
                 if (corpActions == null || corpActions.Length == 0)
                     continue;
 
