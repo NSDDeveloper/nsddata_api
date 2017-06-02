@@ -116,10 +116,10 @@ filter| Нет  | JSON | JSON документ (массив JSON докумен
 Так как нас интересуют корпоративные действия, выбираем продукт "corpactions"
 
 ```cs
-        private const string ApiUrl =
-            "https://nsddata.ru/api/get/corpactions";
+    private const string ApiUrl =
+        "https://nsddata.ru/api/get/corpactions";
 
-        private const string ApiKey = "<INSERT_KEY>";
+    private const string ApiKey = "<INSERT_KEY>";
 ```
 
 
