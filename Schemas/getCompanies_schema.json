@@ -10,51 +10,62 @@
         "id": {
           "title": "id",
           "description": "id организации",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "code_nsd": {
           "title": "Код НРД",
           "description": "Код НРД",
+          "maxLength": "20",
           "type": "string"
         },
         "name_full": {
           "title": "Полное наименование",
           "description": "Полное наименование",
+          "maxLength": "254",
           "type": "string"
         },
         "name_full_en": {
           "title": "Полное наименование на английском языке",
           "description": "Полное наименование на английском языке",
+          "maxLength": "250",
           "type": "string"
         },
         "name_short": {
           "title": "Краткое наименование",
           "description": "Краткое наименование",
+          "maxLength": "150",
           "type": "string"
         },
         "name_short_en": {
           "title": "Краткое наименование на английском языке",
           "description": "Краткое наименование на английском языке",
+          "maxLength": "150",
           "type": "string"
         },
         "name_full_tr": {
           "title": "Полное транслитерированное наименование",
           "description": "Полное транслитерированное наименование",
+          "maxLength": "250",
           "type": "string"
         },
         "name_short_tr": {
           "title": "Краткое транслитерированное наименование",
           "description": "Краткое транслитерированное наименование",
+          "maxLength": "150",
           "type": "string"
         },
         "name_short_hde": {
           "title": "Краткое наименование в ПО ЛУЧ",
           "description": "Краткое наименование в ПО ЛУЧ",
+          "maxLength": "60",
           "type": "string"
         },
         "inn": {
           "title": "ИНН",
           "description": "ИНН",
+          "maxLength": "10",
           "type": "string"
         },
         "company_type": {
@@ -65,11 +76,13 @@
         "cmp_code_fcsm": {
           "title": "Уникальный код эмитента, присвоенный регистрирующим органом",
           "description": "Уникальный код эмитента, присвоенный регистрирующим органом",
+          "maxLength": "100",
           "type": "string"
         },
         "kpp": {
           "title": "КПП",
           "description": "КПП",
+          "maxLength": "9",
           "type": "string"
         },
         "credit_cmp": {
@@ -85,16 +98,19 @@
         "okpo": {
           "title": "ОКПО",
           "description": "ОКПО",
+          "maxLength": "8",
           "type": "string"
         },
         "bik": {
           "title": "БИК",
           "description": "БИК",
+          "maxLength": "9",
           "type": "string"
         },
         "state_reg_num": {
           "title": "Регистрационный номер",
           "description": "Номер гоcударственной регистрации при создании",
+          "maxLength": "20",
           "type": "string"
         },
         "state_reg_date": {
@@ -110,6 +126,7 @@
         "ogrn": {
           "title": "ОГРН",
           "description": "ОГРН",
+          "maxLength": "13",
           "type": "string"
         },
         "egrul_date": {
@@ -140,51 +157,61 @@
         "fio_head": {
           "title": "Первое лицо",
           "description": "Фамилия Имя Отчество (полностью) первого лица организации",
+          "maxLength": "242",
           "type": "string"
         },
         "position_head": {
           "title": "Должность первого лица",
           "description": "Должность первого лица",
+          "maxLength": "100",
           "type": "string"
         },
         "address": {
           "title": "Адрес местонахождения",
           "description": "Адрес местонахождения",
+          "maxLength": "500",
           "type": "string"
         },
         "address_en": {
           "title": "Адрес местонахождения на английском языке",
           "description": "Адрес местонахождения на английском языке",
+          "maxLength": "500",
           "type": "string"
         },
         "post_address": {
           "title": "Адрес почтовый",
           "description": "Адрес почтовый",
+          "maxLength": "500",
           "type": "string"
         },
         "phone": {
           "title": "Телефон",
           "description": "Телефон",
+          "maxLength": "500",
           "type": "string"
         },
         "fax": {
           "title": "Факс",
           "description": "Факс",
+          "maxLength": "500",
           "type": "string"
         },
         "e_mail": {
           "title": "E-mail",
           "description": "Адрес электронной почты",
+          "maxLength": "500",
           "type": "string"
         },
         "www": {
           "title": "Веб-сайт организации",
           "description": "Веб-сайт организации",
+          "maxLength": "500",
           "type": "string"
         },
         "lei_code": {
           "title": "LEI код",
           "description": "LEI код",
+          "maxLength": "100",
           "type": "string"
         },
         "lei_assignment_date": {
@@ -200,24 +227,27 @@
         "okved": {
           "title": "ОКВЭД",
           "description": "ОКВЭД",
+          "maxLength": "8",
           "type": "string"
         },
         "tin": {
           "title": "TIN",
           "description": "TIN",
+          "maxLength": "20",
           "type": "string"
         },
         "tax_number": {
           "title": "Номер налоговой регистрации",
           "description": "Номер налоговой регистрации",
+          "maxLength": "20",
           "type": "string"
         },
-        "licences": {
+        "licenses": {
           "title": "Лицензии",
           "description": "Лицензии",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Licence"
+            "$ref": "#/definitions/License"
           }
         },
         "is_resident": {
@@ -244,16 +274,20 @@
         "id": {
           "title": "Id организационно-правовой формы",
           "description": "Идентификатор организационно-правовой формы",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "name_short": {
           "title": "Краткое наименование организационно-правовой формы",
           "description": "Краткое наименование организационно-правовой формы",
+          "maxLength": "250",
           "type": "string"
         },
         "name_full": {
           "title": "Полное наименование организационно-правовой формы",
           "description": "Полное наименование организационно-правовой формы",
+          "maxLength": "6",
           "type": "string"
         }
       },
@@ -269,41 +303,50 @@
         "id": {
           "title": "id",
           "description": "id организации",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "code_nsd": {
           "title": "Код НРД",
           "description": "Код НРД",
+          "maxLength": "20",
           "type": "string"
         },
         "name_full": {
           "title": "Полное наименование",
           "description": "Полное наименование",
+          "maxLength": "254",
           "type": "string"
         },
         "name_full_en": {
           "title": "Полное наименование на английском языке",
           "description": "Полное наименование на английском языке",
+          "maxLength": "250",
           "type": "string"
         },
         "name_short": {
           "title": "Краткое наименование",
           "description": "Краткое наименование",
+          "maxLength": "150",
           "type": "string"
         },
         "name_short_en": {
           "title": "Краткое наименование на английском языке",
           "description": "Краткое наименование на английском языке",
+          "maxLength": "150",
           "type": "string"
         },
         "name_full_tr": {
           "title": "Полное транслитерированное наименование",
           "description": "Полное транслитерированное наименование",
+          "maxLength": "250",
           "type": "string"
         },
         "name_short_tr": {
           "title": "Краткое транслитерированное наименование",
           "description": "Краткое транслитерированное наименование",
+          "maxLength": "150",
           "type": "string"
         }
       },
@@ -317,31 +360,41 @@
         "id": {
           "title": "Id страны",
           "description": "Идентификатор страны",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "code": {
           "title": "Код страны (Двухбуквенный)",
           "description": "Код страны (Двухбуквенный)",
+          "minLength": "2",
+          "maxLength": "2",
           "type": "string"
         },
         "code3": {
           "title": "Код страны (Трехбуквенный)",
           "description": "Код страны (Трехбуквенный)",
+          "minLength": "3",
+          "maxLength": "3",
           "type": "string"
         },
         "code_digital": {
           "title": "Код страны (Цифровой)",
           "description": "Код страны (Цифровой)",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "name": {
           "title": "Наименование страны",
           "description": "Наименование страны",
+          "maxLength": "255",
           "type": "string"
         },
         "name_en": {
           "title": "Наименование страны на английском языке",
           "description": "Наименование страны на английском языке",
+          "maxLength": "512",
           "type": "string"
         }
       },
@@ -358,16 +411,20 @@
         "id": {
           "title": "Id сектора рынка",
           "description": "Идентификатор сектора рынка",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "name": {
           "title": "Наименование сектора рынка",
           "description": "Наименование",
+          "maxLength": "60",
           "type": "string"
         },
         "name_en": {
           "title": "Наименование сектора рынка на английском языке",
           "description": "Наименование сектора рынка на английском языке",
+          "maxLength": "60",
           "type": "string"
         }
       },
@@ -377,27 +434,31 @@
         "name_en"
       ]
     },
-    "Licence": {
+    "License": {
       "type": "object",
       "properties": {
         "type_code": {
           "title": "Дата выдачи по виду деятельности",
           "description": "Дата выдачи по виду деятельности",
+          "maxLength": "3",
           "type": "string"
         },
         "type": {
           "title": "Тип лицензии",
           "description": "Тип лицензии",
+          "maxLength": "250",
           "type": "string"
         },
         "activity": {
           "title": "Вид деятельности",
           "description": "Вид деятельности, на которую выдана лицензия ",
+          "maxLength": "500",
           "type": "string"
         },
         "num": {
           "title": "Номер лицензии",
           "description": "Номер лицензии",
+          "maxLength": "30",
           "type": "string"
         },
         "date": {
@@ -418,26 +479,33 @@
         "id": {
           "title": "id",
           "description": "Идентификатор ценной бумаги",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "isin": {
           "title": "ISIN",
           "description": "ISIN код",
+          "minLength": "12",
+          "maxLength": "12",
           "type": "string"
         },
         "code_nsd": {
           "title": "Код НРД",
           "description": "Код НРД",
+          "maxLength": "12",
           "type": "string"
         },
         "name_full": {
           "title": "Полное наименование",
           "description": "Полное наименование ценной бумаги",
+          "maxLength": "500",
           "type": "string"
         },
         "name_full_en": {
           "title": "Полное наименование на английском языке",
           "description": "Полное наименование на английском языке",
+          "maxLength": "427",
           "type": "string"
         },
         "instr_type": {
@@ -448,6 +516,7 @@
         "state_reg_number": {
           "title": "Номер гос. регистрации/Идентификационный номер",
           "description": "Номер гос. регистрации/Идентификационный номер",
+          "maxLength": "50",
           "type": "string"
         },
         "isin_date": {
@@ -463,11 +532,14 @@
         "cfi": {
           "title": "CFI",
           "description": "CFI код",
+          "minLength": "6",
+          "maxLength": "6",
           "type": "string"
         },
         "name_short_hde": {
           "title": "Краткое наименование в ПО ЛУЧ",
           "description": "Краткое наименование в ПО ЛУЧ",
+          "maxLength": "30",
           "type": "string"
         },
         "form": {
@@ -611,16 +683,20 @@
         "id": {
           "title": "Id типа ФИ",
           "description": "Идентификатор типа финансового инструмента",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "name": {
           "title": "Наименование типа финансового инструмента",
           "description": "Наименование типа финансового инструмента",
+          "maxLength": "35",
           "type": "string"
         },
         "name_en": {
           "title": "Наименование типа финансового инструмента на английском языке",
           "description": "Наименование типа финансового инструмента на английском языке",
+          "maxLength": "35",
           "type": "string"
         }
       },
@@ -636,16 +712,20 @@
         "id": {
           "title": "Id формы выпуска",
           "description": "Идентификатор формы выпуска",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "name": {
           "title": "Наименование формы выпуска",
           "description": "Наименование формы выпуска",
+          "maxLength": "50",
           "type": "string"
         },
         "name_en": {
           "title": "Наименование формы выпуска на английском языке",
           "description": "Наименование формы выпуска на английском языке",
+          "maxLength": "50",
           "type": "string"
         }
       },
@@ -661,16 +741,20 @@
         "id": {
           "title": "Id классификации Банка России",
           "description": "Идентификатор классификации Банка России",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "code": {
           "title": "Код типа ц.б. по классификации Банка России",
           "description": "Код типа ц.б. по классификации Банка России",
+          "maxLength": "10",
           "type": "string"
         },
         "name": {
           "title": "Наименование типа ц.б. по классификации Банка России",
           "description": "Наименование типа ц.б. по классификации Банка России",
+          "maxLength": "255",
           "type": "string"
         }
       },
@@ -683,7 +767,7 @@
     "Listing": {
       "type": "object",
       "properties": {
-        "Exchange": {
+        "exchange": {
           "title": "Биржа",
           "description": "Биржа",
           "$ref": "#/definitions/CompanyShort"
@@ -691,11 +775,13 @@
         "list": {
           "title": "Листинг",
           "description": "Листинг",
+          "maxLength": "130",
           "type": "string"
         },
         "code": {
           "title": "Торговый код ц.б.",
           "description": "Торговый код ц.б.",
+          "maxLength": "64",
           "type": "string"
         },
         "tks": {
@@ -720,7 +806,7 @@
         }
       },
       "required": [
-        "Exchange",
+        "exchange",
         "code"
       ]
     },
@@ -730,16 +816,20 @@
         "id": {
           "title": "id",
           "description": "id",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "code": {
           "title": "Код",
           "description": "Код",
+          "maxLength": "100",
           "type": "string"
         },
         "name": {
           "title": "Наименование",
           "description": "Наименование",
+          "maxLength": "255",
           "type": "string"
         }
       },
@@ -760,6 +850,7 @@
         "code": {
           "title": "Код ц.б. в месте хранения",
           "description": "Код ц.б. в месте хранения",
+          "maxLength": "64",
           "type": "string"
         },
         "is_main": {
@@ -779,16 +870,19 @@
         "code": {
           "title": "Код места хранения 2 уровня",
           "description": "Код места хранения 2 уровня",
+          "maxLength": "100",
           "type": "string"
         },
         "type": {
           "title": "Тип",
           "description": "Тип",
+          "maxLength": "10",
           "type": "string"
         },
         "common_code": {
           "title": "Common code",
           "description": "Common code",
+          "maxLength": "9",
           "type": "string"
         },
         "place": {
@@ -819,21 +913,26 @@
         "id": {
           "title": "id",
           "description": "id",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "code": {
           "title": "Код",
           "description": "Код",
+          "maxLength": "2",
           "type": "string"
         },
         "name": {
           "title": "Наименование",
           "description": "Наименование",
+          "maxLength": "255",
           "type": "string"
         },
         "name_en": {
           "title": "Наименование на английском языке",
           "description": "Наименование на английском языке",
+          "maxLength": "255",
           "type": "string"
         }
       },
@@ -850,16 +949,20 @@
         "id": {
           "title": "id",
           "description": "id",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "code": {
           "title": "Код",
           "description": "Код",
+          "maxLength": "2",
           "type": "string"
         },
         "name": {
           "title": "Наименование",
           "description": "Наименование",
+          "maxLength": "255",
           "type": "string"
         }
       },
@@ -875,16 +978,20 @@
         "id": {
           "title": "Id состояния состояния ценной бумаги",
           "description": "Идентификатор состояния состояния ценной бумаги",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "name": {
           "title": "Наименование состояния",
           "description": "Наименование состояния",
+          "maxLength": "200",
           "type": "string"
         },
         "name_en": {
           "title": "Наименование состояния на английском языке",
           "description": "Наименование состояния на английском языке",
+          "maxLength": "200",
           "type": "string"
         }
       },
@@ -900,11 +1007,13 @@
         "type": {
           "title": "Тип лицевого счета ",
           "description": "Тип лицевого счета ",
+          "maxLength": "4",
           "type": "string"
         },
         "acc_code": {
           "title": "Номер лицевого счета",
           "description": "Номер лицевого счета",
+          "maxLength": "50",
           "type": "string"
         },
         "open_date": {
@@ -963,21 +1072,28 @@
         "issue_size_planned": {
           "title": "Объявленное количество шт.",
           "description": "Объявленное количество шт.",
+          "minimum": "-9223372036854775808",
+          "maximum": "9223372036854775807",
           "type": "integer"
         },
         "issued_size": {
           "title": "Размещенное количество шт. (текущие данные)",
           "description": "Размещенное количество шт. (текущие данные)",
+          "minimum": "-9223372036854775808",
+          "maximum": "9223372036854775807",
           "type": "integer"
         },
         "origin_issued_size": {
           "title": "Размещенное количество шт.",
           "description": "Размещенное количество шт. (первоначальные данные)",
+          "minimum": "-9223372036854775808",
+          "maximum": "9223372036854775807",
           "type": "integer"
         },
         "issue_number": {
           "title": "Порядковый номер выпуска",
           "description": "Порядквый номер выпуска",
+          "maxLength": "10",
           "type": "string"
         },
         "rp_reg_date": {
@@ -1050,26 +1166,32 @@
         "id": {
           "title": "Id категории ценной бумаги",
           "description": "Идентификатор категории ценной бумаги",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "name_full": {
           "title": "Полное наименование категории",
           "description": "Полное наименование категории",
+          "maxLength": "80",
           "type": "string"
         },
         "name_full_en": {
           "title": "Полное наименование категории на английском языке",
           "description": "Полное наименование категории на английском языке",
+          "maxLength": "80",
           "type": "string"
         },
         "name_short": {
           "title": "Краткое наименование категории",
           "description": "Краткое наименование категории",
+          "maxLength": "10",
           "type": "string"
         },
         "name_short_en": {
           "title": "Краткое наименование категории на английском языке",
           "description": "Краткое наименование категории на английском языке",
+          "maxLength": "20",
           "type": "string"
         }
       },
@@ -1087,16 +1209,20 @@
         "id": {
           "title": "Id типа ценной бумаги",
           "description": "Идентификатор типа ценной бумаги",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "name": {
           "title": "Наименование типа ценной бумаги",
           "description": "Наименование типа ценной бумаги",
+          "maxLength": "120",
           "type": "string"
         },
         "name_en": {
           "title": "Наименование типа ценной бумаги на английском языке",
           "description": "Наименование типа ценной бумаги на английском языке",
+          "maxLength": "80",
           "type": "string"
         }
       },
@@ -1112,21 +1238,26 @@
         "id": {
           "title": "Id валюты",
           "description": "Идентификатор валюты",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "code": {
           "title": "Код",
           "description": "Код",
+          "maxLength": "3",
           "type": "string"
         },
         "name_short": {
           "title": "Наименование краткое",
           "description": "Наименование краткое",
+          "maxLength": "50",
           "type": "string"
         },
         "name_full": {
           "title": "Наименование полное",
           "description": "Наименование полное",
+          "maxLength": "50",
           "type": "string"
         }
       },
@@ -1142,51 +1273,62 @@
         "id": {
           "title": "id",
           "description": "id организации",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "code_nsd": {
           "title": "Код НРД",
           "description": "Код НРД",
+          "maxLength": "20",
           "type": "string"
         },
         "name_full": {
           "title": "Полное наименование",
           "description": "Полное наименование",
+          "maxLength": "254",
           "type": "string"
         },
         "name_full_en": {
           "title": "Полное наименование на английском языке",
           "description": "Полное наименование на английском языке",
+          "maxLength": "250",
           "type": "string"
         },
         "name_short": {
           "title": "Краткое наименование",
           "description": "Краткое наименование",
+          "maxLength": "150",
           "type": "string"
         },
         "name_short_en": {
           "title": "Краткое наименование на английском языке",
           "description": "Краткое наименование на английском языке",
+          "maxLength": "150",
           "type": "string"
         },
         "name_full_tr": {
           "title": "Полное транслитерированное наименование",
           "description": "Полное транслитерированное наименование",
+          "maxLength": "250",
           "type": "string"
         },
         "name_short_tr": {
           "title": "Краткое транслитерированное наименование",
           "description": "Краткое транслитерированное наименование",
+          "maxLength": "150",
           "type": "string"
         },
         "name_short_hde": {
           "title": "Краткое наименование в ПО ЛУЧ",
           "description": "Краткое наименование в ПО ЛУЧ",
+          "maxLength": "60",
           "type": "string"
         },
         "inn": {
           "title": "ИНН",
           "description": "ИНН",
+          "maxLength": "10",
           "type": "string"
         },
         "company_type": {
@@ -1197,11 +1339,13 @@
         "cmp_code_fcsm": {
           "title": "Уникальный код эмитента, присвоенный регистрирующим органом",
           "description": "Уникальный код эмитента, присвоенный регистрирующим органом",
+          "maxLength": "100",
           "type": "string"
         },
         "kpp": {
           "title": "КПП",
           "description": "КПП",
+          "maxLength": "9",
           "type": "string"
         },
         "credit_cmp": {
@@ -1217,16 +1361,19 @@
         "okpo": {
           "title": "ОКПО",
           "description": "ОКПО",
+          "maxLength": "8",
           "type": "string"
         },
         "bik": {
           "title": "БИК",
           "description": "БИК",
+          "maxLength": "9",
           "type": "string"
         },
         "state_reg_num": {
           "title": "Регистрационный номер",
           "description": "Номер гоcударственной регистрации при создании",
+          "maxLength": "20",
           "type": "string"
         },
         "state_reg_date": {
@@ -1242,6 +1389,7 @@
         "ogrn": {
           "title": "ОГРН",
           "description": "ОГРН",
+          "maxLength": "13",
           "type": "string"
         },
         "egrul_date": {
@@ -1272,51 +1420,61 @@
         "fio_head": {
           "title": "Первое лицо",
           "description": "Фамилия Имя Отчество (полностью) первого лица организации",
+          "maxLength": "242",
           "type": "string"
         },
         "position_head": {
           "title": "Должность первого лица",
           "description": "Должность первого лица",
+          "maxLength": "100",
           "type": "string"
         },
         "address": {
           "title": "Адрес местонахождения",
           "description": "Адрес местонахождения",
+          "maxLength": "500",
           "type": "string"
         },
         "address_en": {
           "title": "Адрес местонахождения на английском языке",
           "description": "Адрес местонахождения на английском языке",
+          "maxLength": "500",
           "type": "string"
         },
         "post_address": {
           "title": "Адрес почтовый",
           "description": "Адрес почтовый",
+          "maxLength": "500",
           "type": "string"
         },
         "phone": {
           "title": "Телефон",
           "description": "Телефон",
+          "maxLength": "500",
           "type": "string"
         },
         "fax": {
           "title": "Факс",
           "description": "Факс",
+          "maxLength": "500",
           "type": "string"
         },
         "e_mail": {
           "title": "E-mail",
           "description": "Адрес электронной почты",
+          "maxLength": "500",
           "type": "string"
         },
         "www": {
           "title": "Веб-сайт организации",
           "description": "Веб-сайт организации",
+          "maxLength": "500",
           "type": "string"
         },
         "lei_code": {
           "title": "LEI код",
           "description": "LEI код",
+          "maxLength": "100",
           "type": "string"
         },
         "lei_assignment_date": {
@@ -1332,24 +1490,27 @@
         "okved": {
           "title": "ОКВЭД",
           "description": "ОКВЭД",
+          "maxLength": "8",
           "type": "string"
         },
         "tin": {
           "title": "TIN",
           "description": "TIN",
+          "maxLength": "20",
           "type": "string"
         },
         "tax_number": {
           "title": "Номер налоговой регистрации",
           "description": "Номер налоговой регистрации",
+          "maxLength": "20",
           "type": "string"
         },
-        "licences": {
+        "licenses": {
           "title": "Лицензии",
           "description": "Лицензии",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Licence"
+            "$ref": "#/definitions/License"
           }
         },
         "is_resident": {
@@ -1368,16 +1529,20 @@
         "id": {
           "title": "Id способа размещения ценных бумаг",
           "description": "Идентификатор способа размещения ценных бумаг",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "name": {
           "title": "Наименование способа размещения ценных бумаг",
           "description": "Наименование способа размещения ценных бумаг",
+          "maxLength": "1000",
           "type": "string"
         },
         "name_en": {
           "title": "Наименование способа размещения ценных бумаг на английском языке",
           "description": "Наименование способа размещения ценных бумаг на английском языке",
+          "maxLength": "1000",
           "type": "string"
         }
       },
@@ -1393,11 +1558,13 @@
         "code": {
           "title": "ID состояния отчета/уведомления об итогах выпуска",
           "description": "Идентификатор состояния отчета/уведомления об итогах выпуска",
+          "maxLength": "10",
           "type": "string"
         },
         "name": {
           "title": "Наименование состояния отчета/уведомления об итогах выпуска",
           "description": "Наименование состояния отчета/уведомления об итогах выпуска",
+          "maxLength": "256",
           "type": "string"
         }
       },
@@ -1412,6 +1579,8 @@
         "id": {
           "title": "id",
           "description": "id КД",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "corp_action_type": {
@@ -1424,14 +1593,14 @@
           "description": "Состояние КД",
           "$ref": "#/definitions/CorpActionState"
         },
-        "action_date_calc": {
-          "title": "Дата КД расчетная",
-          "description": "Дата КД расчетная",
-          "type": "string"
-        },
         "action_date_plan": {
           "title": "Дата КД плановая",
           "description": "Дата КД плановая",
+          "type": "string"
+        },
+        "action_date_calc": {
+          "title": "Дата КД расчетная",
+          "description": "Дата КД расчетная",
           "type": "string"
         },
         "action_date_fact": {
@@ -1452,6 +1621,7 @@
         "record_time": {
           "title": "Дата фиксации плановая",
           "description": "Дата фиксации плановая",
+          "maxLength": "8",
           "type": "string"
         },
         "lock_date_calc": {
@@ -1493,6 +1663,26 @@
           "title": "Конвертация",
           "description": "Конвертация",
           "$ref": "#/definitions/Convertion"
+        },
+        "dividend": {
+          "title": "Выплата дивидендов",
+          "description": "Выплата дивидендов",
+          "$ref": "#/definitions/Dividend"
+        },
+        "disclosure": {
+          "title": "Раскрытие",
+          "description": "Раскрытие",
+          "$ref": "#/definitions/Disclosure"
+        },
+        "priority_issue": {
+          "title": "Преимущественное право приобретения ",
+          "description": "Преимущественное право приобретения ",
+          "$ref": "#/definitions/PriorityIssue"
+        },
+        "buy_back": {
+          "title": "Выкуп/тендерное предложение",
+          "description": "Выкуп/тендерное предложение",
+          "$ref": "#/definitions/BuyBack"
         }
       },
       "required": [
@@ -1508,21 +1698,26 @@
         "id": {
           "title": "Id типа КД",
           "description": "Идентификатор типа КД",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "code": {
           "title": "Код типа КД",
           "description": "Код типа КД",
+          "maxLength": "7",
           "type": "string"
         },
         "name": {
           "title": "Наименование КД",
           "description": "Наименование КД",
+          "maxLength": "255",
           "type": "string"
         },
         "name_en": {
           "title": "Наименование КД на английском языке",
           "description": "Наименование КД на английском языке",
+          "maxLength": "50",
           "type": "string"
         }
       },
@@ -1536,19 +1731,21 @@
     "CorpActionState": {
       "type": "object",
       "properties": {
-        "state_mn": {
+        "code": {
           "title": "Мнемокод состояния КД",
           "description": "Мнемокод состояния КД",
+          "maxLength": "10",
           "type": "string"
         },
         "name": {
           "title": "Наименование состояния КД",
           "description": "Наименование состояния КД",
+          "maxLength": "256",
           "type": "string"
         }
       },
       "required": [
-        "state_mn",
+        "code",
         "name"
       ]
     },
@@ -1558,6 +1755,8 @@
         "number": {
           "title": "Порядковый номер купона",
           "description": "Порядковый номер купона",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "rate": {
@@ -1603,6 +1802,8 @@
         "number": {
           "title": "Номер частичного досрочного погашения основного долга",
           "description": "Номер частичного досрочного погашения основного долга",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "size_percent": {
@@ -1633,11 +1834,13 @@
         "agenda": {
           "title": "Повестка дня",
           "description": "Повестка дня",
+          "maxLength": "2147483647",
           "type": "string"
         },
         "results": {
           "title": "Итоги собрания",
           "description": "Итоги собрания",
+          "maxLength": "2147483647",
           "type": "string"
         },
         "meeting_date": {
@@ -1648,11 +1851,13 @@
         "meeting_time": {
           "title": "Время проведения",
           "description": "Время проведения",
+          "maxLength": "50",
           "type": "string"
         },
         "address": {
           "title": "Адрес",
           "description": "Адрес",
+          "maxLength": "350",
           "type": "string"
         },
         "issues": {
@@ -1671,16 +1876,19 @@
         "code": {
           "title": "Мнемокод",
           "description": "Мнемокод",
+          "maxLength": "10",
           "type": "string"
         },
         "name": {
           "title": "Наименование",
           "description": "Наименование",
+          "maxLength": "256",
           "type": "string"
         },
         "name_en": {
           "title": "Наименование на английском языке",
           "description": "Наименование на английском языке",
+          "maxLength": "50",
           "type": "string"
         }
       },
@@ -1715,21 +1923,26 @@
         "id": {
           "title": "id",
           "description": "id",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "code": {
           "title": "Мнемокод",
           "description": "Мнемокод",
+          "maxLength": "3",
           "type": "string"
         },
         "name": {
           "title": "Наименование",
           "description": "Наименование",
+          "maxLength": "255",
           "type": "string"
         },
         "name_en": {
           "title": "Наименование на английском языке",
           "description": "Наименование на английском языке",
+          "maxLength": "255",
           "type": "string"
         }
       },
@@ -1746,16 +1959,19 @@
         "code": {
           "title": "Мнемокод",
           "description": "Мнемокод",
+          "maxLength": "10",
           "type": "string"
         },
         "name": {
           "title": "Наименование",
           "description": "Наименование",
+          "maxLength": "256",
           "type": "string"
         },
         "name_en": {
           "title": "Наименование на английском языке",
           "description": "Наименование на английском языке",
+          "maxLength": "50",
           "type": "string"
         }
       },
@@ -1824,26 +2040,33 @@
         "id": {
           "title": "id",
           "description": "Идентификатор ценной бумаги",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "isin": {
           "title": "ISIN",
           "description": "ISIN код",
+          "minLength": "12",
+          "maxLength": "12",
           "type": "string"
         },
         "code_nsd": {
           "title": "Код НРД",
           "description": "Код НРД",
+          "maxLength": "12",
           "type": "string"
         },
         "name_full": {
           "title": "Полное наименование",
           "description": "Полное наименование ценной бумаги",
+          "maxLength": "500",
           "type": "string"
         },
         "name_full_en": {
           "title": "Полное наименование на английском языке",
           "description": "Полное наименование на английском языке",
+          "maxLength": "427",
           "type": "string"
         },
         "instr_type": {
@@ -1854,12 +2077,488 @@
         "state_reg_number": {
           "title": "Номер гос. регистрации/Идентификационный номер",
           "description": "Номер гос. регистрации/Идентификационный номер",
+          "maxLength": "50",
           "type": "string"
         }
       },
       "required": [
         "id",
         "instr_type"
+      ]
+    },
+    "Dividend": {
+      "type": "object",
+      "properties": {
+        "pay_interval": {
+          "maxLength": "255",
+          "type": "string"
+        },
+        "period_type": {
+          "$ref": "#/definitions/DividendPeriodType"
+        },
+        "year": {
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
+          "type": "integer"
+        },
+        "period_number": {
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
+          "type": "integer"
+        },
+        "date_from": {
+          "type": "string"
+        },
+        "date_to": {
+          "type": "string"
+        },
+        "comment": {
+          "maxLength": "2147483647",
+          "type": "string"
+        },
+        "payment_currency": {
+          "$ref": "#/definitions/Currency"
+        },
+        "recommendation": {
+          "type": "boolean"
+        },
+        "values": {
+          "title": "Размер дивидендов по категориям",
+          "description": "Размер дивидендов по категориям",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DividendValue"
+          }
+        },
+        "taxes": {
+          "title": "Ставка налога",
+          "description": "Ставка налога",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DividendTax"
+          }
+        }
+      }
+    },
+    "DividendPeriodType": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "id",
+          "description": "id",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
+          "type": "integer"
+        },
+        "name": {
+          "title": "Наименование",
+          "description": "Наименование",
+          "maxLength": "50",
+          "type": "string"
+        },
+        "length": {
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
+          "type": "integer"
+        },
+        "description": {
+          "title": "Описание",
+          "description": "Описание",
+          "maxLength": "50",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "length",
+        "description"
+      ]
+    },
+    "DividendValue": {
+      "type": "object",
+      "properties": {
+        "instr_type": {
+          "$ref": "#/definitions/InstrType"
+        },
+        "share_category": {
+          "$ref": "#/definitions/ShareCategory"
+        },
+        "size": {
+          "type": "number"
+        },
+        "no_payment": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "instr_type",
+        "no_payment"
+      ]
+    },
+    "DividendTax": {
+      "type": "object",
+      "properties": {
+        "tax_payer": {
+          "$ref": "#/definitions/TaxPayer"
+        },
+        "value": {
+          "type": "number"
+        },
+        "comment": {
+          "maxLength": "255",
+          "type": "string"
+        }
+      },
+      "required": [
+        "tax_payer"
+      ]
+    },
+    "TaxPayer": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "id",
+          "description": "id",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
+          "type": "integer"
+        },
+        "name": {
+          "title": "Наименование",
+          "description": "Наименование",
+          "maxLength": "50",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    },
+    "Disclosure": {
+      "type": "object",
+      "properties": {
+        "linked_actions": {
+          "title": "Связанные КД",
+          "description": "Связанные КД",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CorpActionShort"
+          }
+        }
+      }
+    },
+    "CorpActionShort": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "id",
+          "description": "id КД",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
+          "type": "integer"
+        },
+        "corp_action_type": {
+          "title": "Тип КД",
+          "description": "Тип КД",
+          "$ref": "#/definitions/CorpActionType"
+        },
+        "state": {
+          "title": "Состояние КД",
+          "description": "Состояние КД",
+          "$ref": "#/definitions/CorpActionState"
+        },
+        "action_date_plan": {
+          "title": "Дата КД плановая",
+          "description": "Дата КД плановая",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "corp_action_type",
+        "state",
+        "action_date_plan"
+      ]
+    },
+    "PriorityIssue": {
+      "type": "object",
+      "properties": {
+        "decision_date": {
+          "type": "string"
+        },
+        "law_section": {
+          "maxLength": "256",
+          "type": "string"
+        },
+        "date_from": {
+          "type": "string"
+        },
+        "date_to": {
+          "type": "string"
+        },
+        "duration": {
+          "maxLength": "200",
+          "type": "string"
+        },
+        "initiator_expire_date": {
+          "type": "string"
+        },
+        "nsd_expire_date": {
+          "type": "string"
+        },
+        "expire_date": {
+          "type": "string"
+        },
+        "nsd_actual_date": {
+          "type": "string"
+        },
+        "sec_count": {
+          "maxLength": "500",
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PriorityIssueItem"
+          }
+        }
+      }
+    },
+    "PriorityIssueItem": {
+      "type": "object",
+      "properties": {
+        "security": {
+          "$ref": "#/definitions/SecurityShort"
+        },
+        "new_security": {
+          "$ref": "#/definitions/SecurityShort"
+        },
+        "price": {
+          "type": "number"
+        },
+        "currency": {
+          "$ref": "#/definitions/Currency"
+        }
+      },
+      "required": [
+        "security"
+      ]
+    },
+    "BuyBack": {
+      "type": "object",
+      "properties": {
+        "is_russian": {
+          "title": "Признак (русский)",
+          "description": "Признак (русский)",
+          "type": "boolean"
+        },
+        "reason": {
+          "title": "Основание проведения КД",
+          "description": "Основание проведения КД",
+          "$ref": "#/definitions/BuyBackReason"
+        },
+        "currency": {
+          "title": "Валюта выкупа",
+          "description": "Валюта выкупа",
+          "$ref": "#/definitions/Currency"
+        },
+        "sec_count": {
+          "title": "Количество ц.б., на которое указана цена выкупа",
+          "description": "Количество ц.б., на которое указана цена выкупа",
+          "type": "number"
+        },
+        "initiator": {
+          "title": "Инициатор выкупа ",
+          "description": "Инициатор выкупа ",
+          "$ref": "#/definitions/CompanyShort"
+        },
+        "registrar_date": {
+          "title": "Дата проведения операции в реестре",
+          "description": "Дата проведения операции в реестре",
+          "type": "string"
+        },
+        "nsd_date": {
+          "title": "Дата проведения операции в НРД",
+          "description": "Дата проведения операции в НРД",
+          "type": "string"
+        },
+        "valid_from_date": {
+          "title": "Период действия предложения С",
+          "description": "Период действия предложения С",
+          "type": "string"
+        },
+        "valid_to_date": {
+          "title": "Период действия предложения По",
+          "description": "Период действия предложения По",
+          "type": "string"
+        },
+        "valid_for_days": {
+          "title": "Период действия предложения (дней)",
+          "description": "Период действия предложения (дней)",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
+          "type": "integer"
+        },
+        "valid_for_period_type": {
+          "title": "Период действия предложения (от)",
+          "description": "Период действия предложения (от)",
+          "$ref": "#/definitions/BuyBackPeriodType"
+        },
+        "initiator_close_date": {
+          "title": "Дата окончания приема заявлений инициатором",
+          "description": "Дата окончания приема заявлений инициатором",
+          "type": "string"
+        },
+        "nsd_close_date": {
+          "title": "Дата окончания приема заявлений НРД",
+          "description": "Дата окончания приема заявлений НРД",
+          "type": "string"
+        },
+        "transfer_from_date": {
+          "title": "Начало срока зачислений ц.б.на счет инициатора",
+          "description": "Начало срока зачислений ц.б.на счет инициатора",
+          "type": "string"
+        },
+        "transfer_to_date": {
+          "title": "Окончание срока зачислений ц.б.на счет инициатора",
+          "description": "Окончание срока зачислений ц.б.на счет инициатора",
+          "type": "string"
+        },
+        "transfer_within_days": {
+          "title": "Зачисление в течении (дней)",
+          "description": "Зачисление в течении (дней)",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
+          "type": "integer"
+        },
+        "transfer_within_period_type": {
+          "title": "Зачисление в течении (от)",
+          "description": "Зачисление в течении (от)",
+          "$ref": "#/definitions/BuyBackPeriodType"
+        },
+        "payment_from_date": {
+          "title": "Дата начала платежа",
+          "description": "Дата начала платежа",
+          "type": "string"
+        },
+        "payment_to_date": {
+          "title": "Дата окончания платежа",
+          "description": "Дата окончания платежа",
+          "type": "string"
+        },
+        "payment_within_days": {
+          "title": "Платеж в течении (дней)",
+          "description": "Платеж в течении (дней)",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
+          "type": "integer"
+        },
+        "payment_within_period_type": {
+          "title": "Платеж в течении (от)",
+          "description": "Платеж в течении (от)",
+          "$ref": "#/definitions/BuyBackPeriodType"
+        },
+        "law_section": {
+          "title": "Сстатья ФЗ Об АО",
+          "description": "Сстатья ФЗ Об АО",
+          "maxLength": "256",
+          "type": "string"
+        },
+        "days_to_accept": {
+          "title": "Количество дней до подтверждения",
+          "description": "Количество дней до подтверждения",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
+          "type": "integer"
+        },
+        "items": {
+          "title": "Ценные бумаги",
+          "description": "Ценные бумаги",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BuyBackItem"
+          }
+        }
+      },
+      "required": [
+        "is_russian"
+      ]
+    },
+    "BuyBackReason": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "title": "Мнемокод",
+          "description": "Мнемокод",
+          "maxLength": "10",
+          "type": "string"
+        },
+        "name": {
+          "title": "Наименование",
+          "description": "Наименование",
+          "maxLength": "256",
+          "type": "string"
+        },
+        "name_en": {
+          "title": "Наименование на английском языке",
+          "description": "Наименование на английском языке",
+          "maxLength": "50",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "name",
+        "name_en"
+      ]
+    },
+    "BuyBackPeriodType": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Id программы ДР",
+          "description": "Идентификатор программы ДР",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
+          "type": "integer"
+        },
+        "name": {
+          "title": "Наименование программы ДР",
+          "description": "Наименование программы ДР",
+          "maxLength": "300",
+          "type": "string"
+        },
+        "name_en": {
+          "title": "Наименование программы ДР на английском языке",
+          "description": "Наименование программы ДР на английском языке",
+          "maxLength": "300",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "name_en"
+      ]
+    },
+    "BuyBackItem": {
+      "type": "object",
+      "properties": {
+        "security": {
+          "title": "Ценная бумага",
+          "description": "Ценная бумага",
+          "$ref": "#/definitions/SecurityShort"
+        },
+        "price": {
+          "title": "Цена выкупа",
+          "description": "Цена выкупа",
+          "type": "number"
+        }
+      },
+      "required": [
+        "security"
       ]
     },
     "Bond": {
@@ -1873,6 +2572,7 @@
         "issue_number": {
           "title": "Порядковый номер выпуска",
           "description": "Порядковый номер выпуска",
+          "maxLength": "10",
           "type": "string"
         },
         "rp_reg_date": {
@@ -1908,11 +2608,15 @@
         "issue_size_planned": {
           "title": "Объявленное количество шт.",
           "description": "Объявленное количество шт.",
+          "minimum": "-9223372036854775808",
+          "maximum": "9223372036854775807",
           "type": "integer"
         },
         "issued_size": {
           "title": "Размещенное количество шт.",
           "description": "Размещенное количество шт.",
+          "minimum": "-9223372036854775808",
+          "maximum": "9223372036854775807",
           "type": "integer"
         },
         "face_value": {
@@ -1956,11 +2660,15 @@
         "coupons_number": {
           "title": "Количество купонов",
           "description": "Количество купонов",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "live_period": {
           "title": "Период обращения",
           "description": "Период обращения",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "first_coupon_date": {
@@ -2001,6 +2709,7 @@
         "bond_series": {
           "title": "Серия",
           "description": "Серия облигации",
+          "maxLength": "50",
           "type": "string"
         },
         "for_market_bonds": {
@@ -2027,16 +2736,16 @@
           }
         },
         "debtors": {
-          "title": "Организатор выпуска",
-          "description": "Организатор выпуска",
+          "title": "Заемщик",
+          "description": "Заемщик",
           "type": "array",
           "items": {
             "$ref": "#/definitions/CompanyShort"
           }
         },
         "organizers": {
-          "title": "Заемщик",
-          "description": "Заемщик",
+          "title": "Организатор выпуска",
+          "description": "Организатор выпуска",
           "type": "array",
           "items": {
             "$ref": "#/definitions/CompanyShort"
@@ -2106,21 +2815,26 @@
         "id": {
           "title": "Id типа купона",
           "description": "Идентификатор типа купона",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "code": {
           "title": "Код",
           "description": "Код",
+          "maxLength": "10",
           "type": "string"
         },
         "name": {
           "title": "Наименование типа купона",
           "description": "Наименование типа купона",
+          "maxLength": "80",
           "type": "string"
         },
         "name_en": {
           "title": "Наименование типа купона на английском языке",
           "description": "Наименование типа купона на английском языке",
+          "maxLength": "80",
           "type": "string"
         }
       },
@@ -2137,21 +2851,26 @@
         "id": {
           "title": "Id типа купонного периода",
           "description": "Идентификатор типа купонного периода",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "code": {
           "title": "Код",
           "description": "Код",
+          "maxLength": "1",
           "type": "string"
         },
         "name": {
           "title": "Наименование типа купонного периода",
           "description": "Наименование типа купонного периода",
+          "maxLength": "100",
           "type": "string"
         },
         "name_en": {
           "title": "Наименование типа купонного периода на английском языке",
           "description": "Наименование типа купонного периода на английском языке",
+          "maxLength": "100",
           "type": "string"
         },
         "per_year": {
@@ -2173,21 +2892,26 @@
         "id": {
           "title": "Id базы расчета",
           "description": "Идентификатор базы расчета",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "name": {
           "title": "Наименование базы расчета",
           "description": "Наименование базы расчета",
+          "maxLength": "20",
           "type": "string"
         },
         "base_month": {
           "title": "Базовый месяц",
           "description": "Базовый месяц",
+          "maxLength": "10",
           "type": "string"
         },
         "base_year": {
           "title": "Базовый год",
           "description": "Базовый год",
+          "maxLength": "10",
           "type": "string"
         }
       },
@@ -2204,11 +2928,14 @@
         "id": {
           "title": "Id состояния доп. состояния ценной бумаги",
           "description": "Идентификатор доп. состояния состояния ценной бумаги",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "name": {
           "title": "Наименование доп. состояния",
           "description": "Наименование доп. состояния",
+          "maxLength": "200",
           "type": "string"
         }
       },
@@ -2223,6 +2950,7 @@
         "number": {
           "title": "Номер программы",
           "description": "Номер программы",
+          "maxLength": "20",
           "type": "string"
         },
         "reg_date": {
@@ -2288,6 +3016,8 @@
         "fraction": {
           "title": "Количество знаков после запятой",
           "description": "Количество знаков после запятой",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "pais_count": {
@@ -2363,16 +3093,19 @@
         "code": {
           "title": "Мнемокод состояния организации",
           "description": "Мнемокод состояния организации",
+          "maxLength": "1",
           "type": "string"
         },
         "name": {
           "title": "Наименование состояния организации",
           "description": "Наименование состояния организации",
+          "maxLength": "50",
           "type": "string"
         },
         "name_en": {
           "title": "Наименование состояния организации на английском языке",
           "description": "Наименование состояния организации на английском языке",
+          "maxLength": "50",
           "type": "string"
         }
       },
@@ -2388,16 +3121,19 @@
         "code": {
           "title": "Мнемокод типа ПИФ",
           "description": "Мнемокод типа ПИФ",
+          "maxLength": "4",
           "type": "string"
         },
         "name": {
           "title": "Тип ПИФ",
           "description": "Наименование типа ПИФ",
+          "maxLength": "50",
           "type": "string"
         },
         "name_en": {
           "title": "Тип ПИФ на английском языке",
           "description": "Наименование типа ПИФ на английском языке",
+          "maxLength": "50",
           "type": "string"
         }
       },
@@ -2413,16 +3149,20 @@
         "id": {
           "title": "id",
           "description": "id",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "name": {
           "title": "Наименование объекта инвестиций",
           "description": "Наименование объекта инвестиций",
+          "maxLength": "50",
           "type": "string"
         },
         "name_en": {
           "title": "Наименование объекта инвестиций на английском языке",
           "description": "Наименование объекта инвестиций на английском языке",
+          "maxLength": "50",
           "type": "string"
         }
       },
@@ -2443,6 +3183,7 @@
         "repres_fi_isin": {
           "title": "ISIN представляемой (базовой) ц.б.",
           "description": "ISIN представляемой (базовой) ц.б.",
+          "maxLength": "64",
           "type": "string"
         },
         "registrar": {
@@ -2478,11 +3219,15 @@
         "ratio_numerator": {
           "title": "Количество ДР",
           "description": "Количество ДР",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "ratio_denominator": {
           "title": "Количество представляемых ц.б.",
           "description": "Количество представляемых ц.б.",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "income_payments": {
@@ -2520,6 +3265,8 @@
         "volume": {
           "title": "Максимальное количество в обращении",
           "description": "Максимальное количество в обращении",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "register_date": {
@@ -2535,21 +3282,26 @@
         "id": {
           "title": "Id категории ДР ",
           "description": "Идентификатор категории ДР",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "code": {
           "title": "Код",
           "description": "Код",
+          "maxLength": "4",
           "type": "string"
         },
         "name": {
           "title": "Наименование категории ДР",
           "description": "Наименование категории ДР",
+          "maxLength": "60",
           "type": "string"
         },
         "name_en": {
           "title": "Наименование категории ДР на английском языке",
           "description": "Наименование категории ДР на английском языке",
+          "maxLength": "60",
           "type": "string"
         }
       },
@@ -2566,16 +3318,20 @@
         "id": {
           "title": "Id программы ДР",
           "description": "Идентификатор программы ДР",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "name": {
           "title": "Наименование программы ДР",
           "description": "Наименование программы ДР",
+          "maxLength": "50",
           "type": "string"
         },
         "name_en": {
           "title": "Наименование программы ДР на английском языке",
           "description": "Наименование программы ДР на английском языке",
+          "maxLength": "50",
           "type": "string"
         }
       },
@@ -2611,6 +3367,8 @@
         "fraction": {
           "title": "Количество знаков после запятой",
           "description": "Количество знаков после запятой",
+          "minimum": "-2147483648",
+          "maximum": "2147483647",
           "type": "integer"
         },
         "mc_count": {
