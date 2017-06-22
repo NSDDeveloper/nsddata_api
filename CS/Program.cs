@@ -14,6 +14,8 @@ namespace ApiSample
         public const string ApiUrl = "https://nsddata.ru/api/get/securities";
         private const string ApiKey = "<INSERT_KEY>";
         public const string FileName = "coupons.xlsx";
+        public static string[] Payments = new string[] {"INTR", "INTR/DD", "MCAL", "MCAL/BN", "BPUT", "REDM", "REDM/BN", "REDM/PS", "REDM/UN", "PRII", "DRAW",
+                                                               "PRED", "DVCA", "DVOP", "DVSE", "DRIP", "CAPG", "DFLT", "CREV", "SHPR", "LIQU"};
 
         static void Main(string[] args)
         {
@@ -60,13 +62,16 @@ namespace ApiSample
             var data = new List<List<JToken>>();
             foreach (var bond in input)
             {
-                var corpActions = bond["bond"]?["income_payments"].ToArray();
+                var corpActions = bond["corp_actions"]?.ToArray();
                 if (corpActions == null || corpActions.Length == 0)
                     continue;
 
                 foreach (var c in corpActions)
                     try
                     {
+                        if (!Payments.Contains(c["corp_action_type"]["code"].ToString()))
+                            continue;
+
                         if (c["corp_action_type"]["name_en"].ToString() == "Interest Payment")
                         {
                             data.Add(new List<JToken>() { bond["isin"], bond["issuer"]["name_full"],
