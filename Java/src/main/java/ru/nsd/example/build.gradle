@@ -1,0 +1,41 @@
+buildscript {
+  repositories {
+    jcenter()
+    mavenCentral()
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "com.github.jengelman.gradle.plugins:shadow:1.2.4"
+  }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+repositories {
+  jcenter()
+  mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'ru.nsd.example.RestClientExample'
+    }
+}
+
+dependencies {
+  compile("com.sun.jersey:jersey-client:1.19.4")
+  compile("org.apache.poi:poi:3.16")
+  compile("org.json:json:20170516")
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '4.0'
+}
