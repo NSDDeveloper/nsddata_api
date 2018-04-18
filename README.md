@@ -54,8 +54,8 @@ https://nsddata.ru/api/get/companies?limit=1000&product=2&include=cbr&apikey=В�
 
 https://nsddata.ru/api/get/securities?product=2&filter={%22add_info.marketability.marketable%22:True}&include=isin,add_info.marketability&apikey=Ваш_API_Ключ
 
-marketable - была ли сделка за последние 3 месяца
-marketable_date - дата сделки
+* add_info.marketability.marketable - была ли сделка за последние 3 месяца
+* add_info.marketability.marketable_date - дата сделки
 
 ```javascript
 {
