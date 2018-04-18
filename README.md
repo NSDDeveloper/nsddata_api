@@ -22,7 +22,6 @@ https://nsddata.ru/api/get/securities?product=2&include=isin,instr_type.name&api
 
 Как называются другие поля и что они содержат можно узнать зайдя на страницу https://nsddata.ru/api/ на страницах соответствующих методов. 
 
-
 ### Как уменьшить объем ответа? ###
 Включите в запрос заголовок:
 Accept-encoding: gzip
@@ -31,6 +30,45 @@ Accept-encoding: gzip
 Используйте оператор $in. Пример фильтрация по двум ISIN:
 
 https://nsddata.ru/api/get/securities?product=2&filter={"isin":{"$in":["первый_isin_здесь","второй_isin_здесь"]}}&apikey=DEMO
+
+### Как получить код сектора экономики и другие параметры организации из справочника ЦБ? ###
+Данные находятся в блоке cbr метода getcompanies:
+
+https://nsddata.ru/api/get/companies?limit=1000&product=2&include=cbr&apikey=Ваш_API_Ключ
+
+```javascript
+    "cbr": {
+        "inn": "7105008031",
+        "kpp": "710501001",
+        "ogrn": "1027100507125",
+        "name_full": "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ТУЛАЧЕРМЕТ\"",
+        "address": "300016,ТУЛЬСКАЯ ОБЛ,ТУЛА Г,ПРЖЕВАЛЬСКОГО УЛ,2,",
+        "economy_sector": "металлургия",
+        "name_short": "ТУЛАЧЕРМЕТ",
+        "country": "РОССИЙСКАЯ ФЕДЕРАЦИЯ"
+    }
+ ```
+
+### Как получить данные об обращаемости ценной бумаги для льготного налогообложения? ###
+Данные находятся в блоке getsecurities.add_info.marketability
+
+https://nsddata.ru/api/get/securities?product=2&filter={%22add_info.marketability.marketable%22:True}&include=isin,add_info.marketability&apikey=Ваш_API_Ключ
+
+marketable - была ли сделка за последние 3 месяца
+marketable_date - дата сделки
+
+```javascript
+{
+    "isin": "RU000A0JNYN1",
+    "add_info": {
+        "marketability": {
+            "marketable": true,
+            "marketable_date": "2018-04-17"
+        }
+    }
+}
+ ```
+
 
 ## Документация разработчика ##
 https://github.com/NSDDeveloper/nsddata_api/blob/master/Developer_Manual_NSDData_API.pdf
