@@ -1,5 +1,8 @@
 # Примеры использования API nsddata.
 
+## FAQ чатбот (beta) ##
+https://app.sdbot.ru/ask/9b9469e9-aced-4900-afdd-9f55b352e459/https%3A%2F%2Fgithub.com%2FNSDDeveloper%2Fnsddata_api%2F?payload=github
+
 ## Tutorial ##
 
 https://github.com/NSDDeveloper/nsddata_api/blob/master/CS_Advanced/README.md
