@@ -1,5 +1,7 @@
 # Примеры использования API nsddata.
 
+## Поиск по базе знаний и связь с разработчиками ##
+https://app.sdbot.ru/ask/9b9469e9-aced-4900-afdd-9f55b352e459/https%3A%2F%2Fgithub.com%2FNSDDeveloper%2Fnsddata_api%2F?payload=gh
 
 ## Tutorial ##
 
